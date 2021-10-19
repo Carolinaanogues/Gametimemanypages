@@ -15,11 +15,22 @@ namespace manypages
     /// <summary>
     /// Logique d'interaction pour Home.xaml
     /// </summary>
-    public partial class Home : Window
+    public partial class Home : Page
     {
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void btn_Home_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Home());
+            
+        }
+
+        private void btn_Home_Copy2_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Profile());
         }
     }
 }

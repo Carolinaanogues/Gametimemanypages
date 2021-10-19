@@ -7,12 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="543fc7c85e3bcb0730e6c3264e9b4458.png" />
     <None Remove="hidden.png" />
+    <None Remove="login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
     <None Remove="user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="543fc7c85e3bcb0730e6c3264e9b4458.png" />
     <Resource Include="hidden.png" />
+    <Resource Include="login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
     <Resource Include="user.png" />
   </ItemGroup>
 
