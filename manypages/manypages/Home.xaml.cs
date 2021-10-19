@@ -24,7 +24,7 @@ namespace manypages
 
         private void btn_Home_Copy_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Historique());
+            
             
         }
 
@@ -36,6 +36,11 @@ namespace manypages
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Login());
+        }
+
+        private void btn_Home_Copy1_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Historique());
         }
     }
 }

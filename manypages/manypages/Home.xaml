@@ -13,17 +13,6 @@
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="635" Margin="-8,25,0,0" VerticalAlignment="Top" Width="866" Source="/543fc7c85e3bcb0730e6c3264e9b4458.png" Grid.ColumnSpan="2" Opacity="0.9" OpacityMask="Black"/>
 
-        <GridSplitter HorizontalAlignment="Left" Height="811" Margin="506,-394,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5" Background="Black" >
-            <GridSplitter.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90.076"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </GridSplitter.RenderTransform>
-        </GridSplitter>
-
         <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="132" Margin="567,228,0,0" Stroke="White" VerticalAlignment="Top" Width="200"/>
 
         <Rectangle HorizontalAlignment="Left" Height="140" Margin="35,228,0,0" Stroke="White" VerticalAlignment="Top" Width="192"/>
@@ -77,7 +66,7 @@
         <Image HorizontalAlignment="Left" Height="37" Margin="38,28,0,0" VerticalAlignment="Top" Width="62" Source="/user.png" Grid.Column="1"/>
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0"/>
         <Button x:Name="btn_Home_Copy" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Home_Copy_Click"/>
-        <Button x:Name="btn_Home_Copy1" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0"/>
+        <Button x:Name="btn_Home_Copy1" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0" Click="btn_Home_Copy1_Click"/>
         <Button x:Name="btn_Home_Copy2" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="191,5,0,0" Click="btn_Home_Copy2_Click"/>
         <Button x:Name="btn_login" Content="" HorizontalAlignment="Left" Margin="707,33,0,0" VerticalAlignment="Top" Width="36" Height="32" Grid.ColumnSpan="2" Click="btn_login_Click">
             <Button.BorderBrush>

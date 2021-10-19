@@ -12,7 +12,7 @@
             <ColumnDefinition Width="13*"/>
             <ColumnDefinition Width="76*"/>
         </Grid.ColumnDefinitions>
-        <GridSplitter HorizontalAlignment="Left" Height="689" Margin="329,-332,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5" Background="#FF050A31">
+        <GridSplitter HorizontalAlignment="Left" Height="693" Margin="329,-335,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5" Background="Black">
             <GridSplitter.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,13 +22,12 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-
-        <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF46ACE0" Foreground="White" Margin="0,5,0,0"/>
-        <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="79" BorderBrush="#FF050A31" Background="#FF46ACE0" Foreground="White" Margin="60,5,0,0"/>
-        <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top" Width="79" BorderBrush="#FF050A31" Background="#FF46ACE0" Foreground="White" Margin="139,5,0,0"/>
-        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" BorderBrush="#FF050A31" Background="#FF46ACE0" Foreground="White" Margin="218,5,0,0" RenderTransformOrigin="0.621,0.629" Click="btn_Profile_Click"/>
-        <Label Content="Profile" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30"/>
-        <GridSplitter HorizontalAlignment="Left" Height="461" Margin="243,-154,0,0" VerticalAlignment="Top" Width="5" RenderTransformOrigin="0.5,0.5" Background="#FF46ACE0">
+        <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0"/>
+        <Button x:Name="btn_Home_Copy" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" />
+        <Button x:Name="btn_Home_Copy1" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0"/>
+        <Button x:Name="btn_Home_Copy2" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="191,5,0,0" />
+        
+            <GridSplitter HorizontalAlignment="Left" Height="461" Margin="243,-154,0,0" VerticalAlignment="Top" Width="5" RenderTransformOrigin="0.5,0.5" Background="#FF46ACE0">
             <GridSplitter.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
