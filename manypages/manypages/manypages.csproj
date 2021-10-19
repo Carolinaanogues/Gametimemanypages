@@ -16,4 +16,10 @@
     <Resource Include="user.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="SixLabors.ImageSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13">
+      <HintPath>..\..\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
