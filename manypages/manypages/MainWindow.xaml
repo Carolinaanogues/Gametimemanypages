@@ -12,7 +12,6 @@
             <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
         <Frame x:Name="frame" Content="Frame" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="238,316,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

@@ -5,8 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:manypages"
         mc:Ignorable="d"
-        Title="Profile" Height="450" Width="800">
+        Title="Profile" Height="450" Width="686">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="711*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="76*"/>
+        </Grid.ColumnDefinitions>
+        <GridSplitter HorizontalAlignment="Left" Height="689" Margin="329,-332,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5" Background="#FF050A31">
+            <GridSplitter.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.076"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GridSplitter.RenderTransform>
+        </GridSplitter>
+
+        <Button Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF46ACE0" Foreground="White" Margin="0,5,0,0"/>
+        <Button Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="79" BorderBrush="#FF050A31" Background="#FF46ACE0" Foreground="White" Margin="60,5,0,0"/>
+        <Button Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top" Width="79" BorderBrush="#FF050A31" Background="#FF46ACE0" Foreground="White" Margin="139,5,0,0"/>
+        <Button Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" BorderBrush="#FF050A31" Background="#FF46ACE0" Foreground="White" Margin="218,5,0,0" RenderTransformOrigin="0.621,0.629"/>
+        <Label Content="Profile" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30"/>
+        <GridSplitter HorizontalAlignment="Left" Height="461" Margin="243,-154,0,0" VerticalAlignment="Top" Width="5" RenderTransformOrigin="0.5,0.5" Background="#FF46ACE0">
+            <GridSplitter.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.981"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GridSplitter.RenderTransform>
+        </GridSplitter>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="362,126,0,0" VerticalAlignment="Top" Width="149" BorderBrush="White"/>
+        <Label HorizontalAlignment="Left" Margin="274,123,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16">
+            <Label Content="Pseudo :" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        </Label>
+        <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="274,172,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Button Content="Chercher une image..." HorizontalAlignment="Left" Margin="28,217,0,0" VerticalAlignment="Top" BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="143"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="400,176,0,0" VerticalAlignment="Top" Width="149" BorderBrush="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="31" Margin="362,123,0,0" Stroke="Black" VerticalAlignment="Top" Width="149"/>
+        <Rectangle HorizontalAlignment="Left" Height="31" Margin="398,171,0,0" Stroke="Black" VerticalAlignment="Top" Width="149"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="89,281,0,0" VerticalAlignment="Top" Width="228"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="25,276,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Prénom :" HorizontalAlignment="Left" Margin="26,316,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Date de naissance :" HorizontalAlignment="Left" Margin="25,353,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Email :" HorizontalAlignment="Left" Margin="28,391,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="109,322,0,0" VerticalAlignment="Top" Width="228"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="183,357,0,0" VerticalAlignment="Top" Width="228"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="89,394,0,0" VerticalAlignment="Top" Width="228"/>
+        <Button Content="Reinitialiser les données" HorizontalAlignment="Left" Margin="510,370,0,0" VerticalAlignment="Top" BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="143" Grid.ColumnSpan="3"/>
+        <Button Content="Editer les données" HorizontalAlignment="Left" Margin="510,345,0,0" VerticalAlignment="Top" BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="143" Grid.ColumnSpan="3"/>
+        <Button Content="Suprimer la compte" HorizontalAlignment="Left" Margin="509,395,0,0" VerticalAlignment="Top" BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="144" Grid.ColumnSpan="3"/>
+        <Ellipse HorizontalAlignment="Left" Height="103" Margin="30,92,0,0" Stroke="Black" VerticalAlignment="Top" Width="109"/>
+
     </Grid>
 </Window>
