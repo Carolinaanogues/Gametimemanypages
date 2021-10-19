@@ -12,8 +12,8 @@
         <Label Content="Login" HorizontalAlignment="Center" Margin="0,147,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Normal" FontSize="16"/>
         <Label Content="Utilisateur :" HorizontalAlignment="Left" Margin="72,205,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
         <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="53,255,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <GridSplitter HorizontalAlignment="Left" Height="357" VerticalAlignment="Center" Width="5" Background="#FFF68B1F"/>
-        <GridSplitter HorizontalAlignment="Left" Height="357" VerticalAlignment="Center" Width="5" Background="#FFF68B1F" Margin="467,0,0,0"/>
+        <GridSplitter HorizontalAlignment="Left" Height="357" VerticalAlignment="Center" Width="5" Background="#FF1F58F6"/>
+        <GridSplitter HorizontalAlignment="Left" Height="357" VerticalAlignment="Center" Width="5" Background="#FF1F58F6" Margin="467,0,0,0"/>
         <GridSplitter HorizontalAlignment="Center" Height="110" Margin="0,128,0,0" VerticalAlignment="Top" Width="6" RenderTransformOrigin="0.5,0.5" Background="#FF0A0863">
             <GridSplitter.RenderTransform>
                 <TransformGroup>
@@ -28,9 +28,9 @@
         <Rectangle HorizontalAlignment="Center" Height="20" Margin="0,209,0,0" Stroke="Black" VerticalAlignment="Top" Width="159"/>
         <PasswordBox HorizontalAlignment="Center" Margin="0,259,0,0" VerticalAlignment="Top" Width="159" Height="20" BorderBrush="Black"/>
         <Label Content="T'as pas de compte ?" HorizontalAlignment="Left" Margin="134,298,0,0" VerticalAlignment="Top" FontSize="9"/>
-        <Button Content="Crée une ici !" HorizontalAlignment="Left" Margin="241,303,0,0" VerticalAlignment="Top" Background="#FFF68B1F" Foreground="White" BorderBrush="#FFF68B1F" Width="70" FontSize="8"/>
+        <Button Content="Crée une ici !" HorizontalAlignment="Left" Margin="241,303,0,0" VerticalAlignment="Top" Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="70" FontSize="8"/>
         <Label Content="Mot de passe oublié ?" HorizontalAlignment="Left" Margin="134,325,0,0" VerticalAlignment="Top" FontSize="9"/>
-        <Button Content="Clique ici !" HorizontalAlignment="Left" Margin="241,329,0,0" VerticalAlignment="Top" Background="#FFF68B1F" Foreground="White" BorderBrush="#FFF68B1F" Width="70" FontSize="8"/>
+        <Button Content="Clique ici !" HorizontalAlignment="Left" Margin="241,329,0,0" VerticalAlignment="Top" Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="70" FontSize="8"/>
         <Button Content="Entrer" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top" Background="#FF0A0863" Foreground="White" BorderBrush="#FF0A0863" Height="20" Width="38" FontSize="10"/>
         <Button Content="" HorizontalAlignment="Left" Margin="292,262,0,0" VerticalAlignment="Top" Height="15" Width="19" BorderBrush="White">
             <Button.Background>

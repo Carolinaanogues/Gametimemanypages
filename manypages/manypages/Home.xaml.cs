@@ -24,13 +24,18 @@ namespace manypages
 
         private void btn_Home_Copy_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Home());
+            this.NavigationService.Navigate(new Historique());
             
         }
 
         private void btn_Home_Copy2_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Profile());
+        }
+
+        private void btn_login_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Login());
         }
     }
 }
