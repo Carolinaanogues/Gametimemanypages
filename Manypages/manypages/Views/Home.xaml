@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:manypages"
         mc:Ignorable="d"
         Title="Home" Height="450" Width="800">
     <Grid Margin="0,0,0,-6">
@@ -11,7 +10,7 @@
             <ColumnDefinition Width="143*"/>
             <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Left" Height="635" Margin="-8,25,0,0" VerticalAlignment="Top" Width="866" Source="/543fc7c85e3bcb0730e6c3264e9b4458.png" Grid.ColumnSpan="2" Opacity="0.9" OpacityMask="Black"/>
+        <Image HorizontalAlignment="Left" Height="635" Margin="-8,25,0,0" VerticalAlignment="Top" Width="866" Source="/assets/UI/543fc7c85e3bcb0730e6c3264e9b4458.png" Grid.ColumnSpan="2" Opacity="0.9" OpacityMask="Black"/>
 
         <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="132" Margin="567,228,0,0" Stroke="White" VerticalAlignment="Top" Width="200"/>
 
@@ -63,7 +62,7 @@
         <Image HorizontalAlignment="Left" Height="34" Margin="567,292,0,0" VerticalAlignment="Top" Width="43"/>
         <Image HorizontalAlignment="Left" Height="34" Margin="622,292,0,0" VerticalAlignment="Top" Width="43"/>
         <Image HorizontalAlignment="Left" Height="34" Margin="681,308,0,0" VerticalAlignment="Top" Width="43" Grid.ColumnSpan="2"/>
-        <Image HorizontalAlignment="Left" Height="37" Margin="38,28,0,0" VerticalAlignment="Top" Width="62" Source="/user.png" Grid.Column="1"/>
+        <Image HorizontalAlignment="Left" Height="37" Margin="38,28,0,0" VerticalAlignment="Top" Width="62" Source="/assets/UI/user.png" Grid.Column="1"/>
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0"/>
         <Button x:Name="btn_Home_Copy" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Home_Copy_Click"/>
         <Button x:Name="btn_Home_Copy1" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0" Click="btn_Home_Copy1_Click"/>
@@ -73,7 +72,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush ImageSource="/login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png"/>
+                <ImageBrush ImageSource="/assets/UI/login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png"/>
             </Button.Background>
         </Button>
 
