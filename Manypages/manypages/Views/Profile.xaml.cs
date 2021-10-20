@@ -1,12 +1,11 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
 
 namespace manypages
 {
     /// <summary>
     /// Logique d'interaction pour Profile.xaml
     /// </summary>
-    public partial class Profile : Page
+    public partial class Profile
     {
         public Profile()
         {
@@ -15,7 +14,7 @@ namespace manypages
 
         private void btn_Profile_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Profile());
+            NavigationService?.Navigate(new Profile());
         }
     }
 }

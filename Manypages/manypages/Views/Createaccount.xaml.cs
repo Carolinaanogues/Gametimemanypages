@@ -1,11 +1,9 @@
-﻿using System.Windows.Controls;
-
-namespace manypages
+﻿namespace manypages
 {
     /// <summary>
     /// Logique d'interaction pour Createaccount.xaml
     /// </summary>
-    public partial class Createaccount : Page
+    public partial class Createaccount
     {
         public Createaccount()
         {

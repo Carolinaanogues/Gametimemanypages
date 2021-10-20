@@ -11,7 +11,7 @@ namespace manypages.Models
     {
         #region Properties
 
-        public static List<manypages.ObjectStructure.Objects.Historique> Hist { get; set; }
+        public static List<ObjectStructure.Objects.Historique> Hist { get; set; }
 
         #endregion
 
@@ -22,21 +22,21 @@ namespace manypages.Models
         /// </summary>
         /// <param name="user">get history for which user</param>
         /// <returns>1st item : index in the list, 2nd item : user's history</returns>
-        public static Tuple<int, manypages.ObjectStructure.Objects.Historique> GetByUser(Profil user)
+        public static Tuple<int, ObjectStructure.Objects.Historique> GetByUser(Profil user)
         {
             try
             {
-                return new Tuple<int, manypages.ObjectStructure.Objects.Historique>(
+                return new Tuple<int, ObjectStructure.Objects.Historique>(
                     Hist.FindIndex(h => h.Profile.Id == user.Id),
                     Hist.First(h => h.Profile.Id == user.Id));
             }
             catch (InvalidOperationException)
             {
-                manypages.ObjectStructure.Objects.Historique hist =
-                    new manypages.ObjectStructure.Objects.Historique(user,
+                ObjectStructure.Objects.Historique hist =
+                    new ObjectStructure.Objects.Historique(user,
                         new ObservableCollection<Tuple<Jeuxvideo, Status>>());
                 Hist.Add(hist);
-                return new Tuple<int, manypages.ObjectStructure.Objects.Historique>(Hist.Count - 1, hist);
+                return new Tuple<int, ObjectStructure.Objects.Historique>(Hist.Count - 1, hist);
             }
         }
 
