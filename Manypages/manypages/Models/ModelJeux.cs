@@ -7,9 +7,9 @@ using manypages.ObjectStructure.Objects;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
-namespace manypages.Logic
+namespace manypages.Models
 {
-    public class LogicJeux
+    public class ModelJeux
     {
         #region Properties
 

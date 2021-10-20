@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using manypages.ObjectStructure.Objects;
 
-namespace manypages.Logic
+namespace manypages.Models
 {
     public class LogicProfiles
     {

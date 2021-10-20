@@ -5,9 +5,9 @@ using System.Linq;
 using manypages.ObjectStructure.Enums;
 using manypages.ObjectStructure.Objects;
 
-namespace manypages.Logic
+namespace manypages.Models
 {
-    public class LogicHistorique
+    public class ModelHistorique
     {
         #region Properties
 
