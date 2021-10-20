@@ -11,7 +11,8 @@ namespace manypages.Models
     {
         #region Properties
 
-        public static List<ObjectStructure.Objects.Historique> Hist { get; set; }
+        public static List<ObjectStructure.Objects.Historique> Hist { get; set; } =
+            new List<ObjectStructure.Objects.Historique>();
 
         #endregion
 
