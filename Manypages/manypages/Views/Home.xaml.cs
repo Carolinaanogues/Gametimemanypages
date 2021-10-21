@@ -14,6 +14,7 @@ namespace manypages
 
         private void btn_Home_Copy_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService?.Navigate(new Bibliotheque());
         }
 
         private void btn_Home_Copy2_Click(object sender, RoutedEventArgs e)
