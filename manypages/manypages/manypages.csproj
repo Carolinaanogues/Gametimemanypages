@@ -11,6 +11,7 @@
     <None Remove="hidden.png" />
     <None Remove="login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
     <None Remove="user.png" />
+    <None Remove="Views\user.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +19,7 @@
     <Resource Include="assets\UI\hidden.png" />
     <Resource Include="assets\UI\login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
     <Resource Include="assets\UI\user.png" />
+    <Resource Include="Views\user.png" />
   </ItemGroup>
 
   <ItemGroup>

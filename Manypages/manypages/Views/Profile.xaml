@@ -68,8 +68,9 @@
         <Label Content="Email :" HorizontalAlignment="Left" Margin="28,391,0,0" VerticalAlignment="Top"
                FontWeight="Bold" FontSize="16" />
         <Label Content="Label" HorizontalAlignment="Left" Margin="109,322,0,0" VerticalAlignment="Top" Width="228" />
-        <Label Content="Label" HorizontalAlignment="Left" Margin="183,357,0,0" VerticalAlignment="Top" Width="228" />
-        <Label Content="Label" HorizontalAlignment="Left" Margin="89,394,0,0" VerticalAlignment="Top" Width="228" />
+        <Label HorizontalAlignment="Left" Margin="89,394,0,0" VerticalAlignment="Top" Width="228" >
+            <DatePicker/>
+        </Label>
         <Button Content="Reinitialiser les données" HorizontalAlignment="Left" Margin="510,370,0,0"
                 VerticalAlignment="Top" BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="143"
                 Grid.ColumnSpan="3" />
@@ -77,8 +78,8 @@
                 BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="143" Grid.ColumnSpan="3" />
         <Button Content="Suprimer la compte" HorizontalAlignment="Left" Margin="509,395,0,0" VerticalAlignment="Top"
                 BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="144" Grid.ColumnSpan="3" />
-        <Ellipse HorizontalAlignment="Left" Height="103" Margin="30,92,0,0" Stroke="Black" VerticalAlignment="Top"
-                 Width="109" />
+        <Rectangle HorizontalAlignment="Left" Height="106" Margin="21,106,0,0" Stroke="Black" VerticalAlignment="Top" Width="161" StrokeThickness="2"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="26,106,0,0" VerticalAlignment="Top" Width="158"/>
 
     </Grid>
 </Page>
