@@ -24,6 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="SixLabors.ImageSharp">
+      <HintPath>..\..\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="assets\UI\543fc7c85e3bcb0730e6c3264e9b4458.png" />
     <Resource Include="assets\UI\hidden.png" />
     <Resource Include="assets\UI\login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
@@ -38,12 +44,6 @@
     <Resource Include="Views\star (3).png" />
     <Resource Include="Views\trophy.png" />
     <Resource Include="Views\user.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="SixLabors.ImageSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13">
-      <HintPath>..\..\SixLabors.ImageSharp.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

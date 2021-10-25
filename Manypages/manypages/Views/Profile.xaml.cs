@@ -1,7 +1,10 @@
 ﻿using System.Windows;
-using System;
-using System.IO;
 using Microsoft.Win32;
+using System;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+//using System.Windows.Controls;
+//using System.Windows.Media.Imaging;
 
 namespace manypages
 {
@@ -13,6 +16,7 @@ namespace manypages
         public Profile()
         {
             InitializeComponent();
+            
         }
 
         
@@ -41,9 +45,23 @@ namespace manypages
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
+            {
                 openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-            labelimg.Content = openFileDialog.FileName;
-            
+                labelimg.Content = openFileDialog.FileName;
+
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.UriSource = new Uri(openFileDialog.FileName);
+                bitmapImage.EndInit();
+                Image img = new Image
+                {
+                    Source = bitmapImage
+                };
+                imgdisplay.Source = img.Source;
+
+
+            }
+
         }
     }
 }
