@@ -21,5 +21,15 @@ namespace manypages
         {
             NavigationService?.Navigate(new Home());
         }
+
+        private void btn_Biblio_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new Bibliotheque());
+        }
+
+        private void btn_Historique_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new Historique());
+        }
     }
 }

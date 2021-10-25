@@ -98,14 +98,14 @@
         <Image HorizontalAlignment="Left" Height="34" Margin="681,308,0,0" VerticalAlignment="Top" Width="43"
                Grid.ColumnSpan="2" />
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" />
-        <Button x:Name="btn_Home_Copy" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
+                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" />
+        <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0"
                 Click="btn_Home_Copy_Click" />
-        <Button x:Name="btn_Home_Copy1" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
+        <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0"
                 Click="btn_Home_Copy1_Click" />
-        <Button x:Name="btn_Home_Copy2" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
+        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="191,5,0,0"
                 Click="btn_Home_Copy2_Click" />
         <Button x:Name="btn_login" Content="" HorizontalAlignment="Left" Margin="707,33,0,0" VerticalAlignment="Top"

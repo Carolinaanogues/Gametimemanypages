@@ -36,5 +36,10 @@ namespace manypages
         {
             NavigationService?.Navigate(new Createaccount());
         }
+
+        private void btn_Home_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new Home());
+        }
     }
 }
