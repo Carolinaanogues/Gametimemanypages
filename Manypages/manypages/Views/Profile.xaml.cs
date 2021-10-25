@@ -1,4 +1,7 @@
 ﻿using System.Windows;
+using System;
+using System.IO;
+using Microsoft.Win32;
 
 namespace manypages
 {
@@ -32,6 +35,15 @@ namespace manypages
         private void btn_Profile_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Profile());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+                openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            labelimg.Content = openFileDialog.FileName;
+            
         }
     }
 }

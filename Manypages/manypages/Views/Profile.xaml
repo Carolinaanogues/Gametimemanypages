@@ -51,7 +51,7 @@
         <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="274,172,0,0" VerticalAlignment="Top"
                FontWeight="Bold" FontSize="16" />
         <Button Content="Chercher une image..." HorizontalAlignment="Left" Margin="28,217,0,0" VerticalAlignment="Top"
-                BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="143" />
+                BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="143" Click="Button_Click" />
         <Label Content="Label" HorizontalAlignment="Left" Margin="400,176,0,0" VerticalAlignment="Top" Width="149"
                BorderBrush="White" />
         <Rectangle HorizontalAlignment="Left" Height="31" Margin="362,123,0,0" Stroke="Black" VerticalAlignment="Top"
@@ -79,7 +79,8 @@
         <Button Content="Suprimer la compte" HorizontalAlignment="Left" Margin="509,395,0,0" VerticalAlignment="Top"
                 BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="144" Grid.ColumnSpan="3" />
         <Rectangle HorizontalAlignment="Left" Height="106" Margin="21,106,0,0" Stroke="Black" VerticalAlignment="Top" Width="161" StrokeThickness="2"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="26,106,0,0" VerticalAlignment="Top" Width="158"/>
+        <Image x:Name="imgdisplay" HorizontalAlignment="Left" Height="100" Margin="26,106,0,0" VerticalAlignment="Top" Width="158"/>
+        <Label x:Name="labelimg" Content="Label" HorizontalAlignment="Left" Margin="30,242,0,0" VerticalAlignment="Top" Width="425"/>
 
     </Grid>
 </Page>
