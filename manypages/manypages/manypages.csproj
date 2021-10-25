@@ -11,6 +11,15 @@
     <None Remove="hidden.png" />
     <None Remove="login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
     <None Remove="user.png" />
+    <None Remove="Views\award.png" />
+    <None Remove="Views\gold-medal.png" />
+    <None Remove="Views\medal %281%29.png" />
+    <None Remove="Views\medal.png" />
+    <None Remove="Views\sports-trophy.png" />
+    <None Remove="Views\star %281%29.png" />
+    <None Remove="Views\star %282%29.png" />
+    <None Remove="Views\star %283%29.png" />
+    <None Remove="Views\trophy.png" />
     <None Remove="Views\user.png" />
   </ItemGroup>
 
@@ -19,6 +28,15 @@
     <Resource Include="assets\UI\hidden.png" />
     <Resource Include="assets\UI\login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
     <Resource Include="assets\UI\user.png" />
+    <Resource Include="Views\award.png" />
+    <Resource Include="Views\gold-medal.png" />
+    <Resource Include="Views\medal (1).png" />
+    <Resource Include="Views\medal.png" />
+    <Resource Include="Views\sports-trophy.png" />
+    <Resource Include="Views\star (1).png" />
+    <Resource Include="Views\star (2).png" />
+    <Resource Include="Views\star (3).png" />
+    <Resource Include="Views\trophy.png" />
     <Resource Include="Views\user.png" />
   </ItemGroup>
 

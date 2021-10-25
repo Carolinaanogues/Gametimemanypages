@@ -6,97 +6,54 @@
       mc:Ignorable="d"
       Title="Home" Height="450" Width="800">
     <Grid Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="181*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="143*" />
             <ColumnDefinition Width="17*" />
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="635" Margin="-8,25,0,0" VerticalAlignment="Top" Width="866"
                Source="/assets/UI/543fc7c85e3bcb0730e6c3264e9b4458.png" Grid.ColumnSpan="2" Opacity="0.9"
-               OpacityMask="Black" />
+               OpacityMask="Black" Grid.RowSpan="2" />
 
-        <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="132" Margin="567,228,0,0" Stroke="White"
-                   VerticalAlignment="Top" Width="200" />
+        <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="132" Margin="567,134,0,0" Stroke="White"
+                   VerticalAlignment="Top" Width="200" StrokeThickness="0.5" Grid.Row="1" />
 
-        <Rectangle HorizontalAlignment="Left" Height="140" Margin="35,228,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="192" />
-        <Rectangle HorizontalAlignment="Left" Height="128" Margin="284,213,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="231" />
+        <Rectangle HorizontalAlignment="Left" Height="140" Margin="35,134,0,0" Stroke="White" VerticalAlignment="Top"
+                   Width="192" StrokeThickness="0.5" Grid.Row="1" />
+        <Rectangle HorizontalAlignment="Left" Height="128" Margin="284,119,0,0" Stroke="White" VerticalAlignment="Top"
+                   Width="231" StrokeThickness="0.5" Grid.Row="1" />
 
         <Label Content="GAME TIME " HorizontalAlignment="Left" Margin="156,58,0,0" VerticalAlignment="Top"
                FontWeight="Bold" FontStyle="Italic" FontFamily="Gill Sans Nova Cond XBd" FontSize="100" Height="124"
-               Width="470" Foreground="#FFF7F7F7">
+               Width="470" Foreground="#FFF7F7F7" Grid.RowSpan="2">
             <Label.Effect>
                 <DropShadowEffect />
             </Label.Effect>
         </Label>
-        <Rectangle HorizontalAlignment="Left" Height="131" Margin="50,258,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="201" StrokeThickness="3" RadiusY="2" RadiusX="2" />
-        <Rectangle HorizontalAlignment="Left" Height="131" Margin="300,242,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="200" StrokeThickness="3" RadiusY="2" RadiusX="2" />
-        <Rectangle HorizontalAlignment="Left" Height="131" Margin="549,258,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="201" StrokeThickness="3" RadiusX="2" RadiusY="2" Grid.ColumnSpan="2" />
-        <Rectangle HorizontalAlignment="Left" Height="65" Margin="123,324,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="54" Fill="#FF0C0328" />
-        <Rectangle HorizontalAlignment="Left" Height="54" Margin="184,334,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="50" Fill="#FF0C0328" />
-        <Rectangle HorizontalAlignment="Left" Height="41" Margin="66,347,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="52" Fill="#FF0C0328" />
-        <Label Content="1" HorizontalAlignment="Left" Margin="134,338,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="49" Width="43" FontFamily="Georgia Pro Black" />
-        <Label Content="2" HorizontalAlignment="Left" Margin="191,343,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="49" Width="43" FontFamily="Georgia Pro Black"
-               RenderTransformOrigin="0.296,0.478" />
-        <Label Content="3" HorizontalAlignment="Left" Margin="80,348,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="39" Width="26" FontFamily="Georgia Pro Black" />
-        <Rectangle HorizontalAlignment="Left" Height="64" Margin="318,304,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="54" Fill="#FF0C0328" />
-        <Rectangle HorizontalAlignment="Left" Height="54" Margin="377,314,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="50" Fill="#FF0C0328" />
-        <Rectangle HorizontalAlignment="Left" Height="40" Margin="432,328,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="52" Fill="#FF0C0328" />
-        <Rectangle HorizontalAlignment="Left" Height="64" Margin="622,323,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="54" Fill="#FF0C0328" />
-        <Rectangle HorizontalAlignment="Left" Height="54" Margin="567,333,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="50">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" />
-                    <GradientStop Color="#FF021B3C" Offset="1" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="40" Margin="681,347,0,0" Stroke="#FF0C0328"
-                   VerticalAlignment="Top" Width="52" Fill="#FF0C0328" Grid.ColumnSpan="2" />
-        <Label Content="1" HorizontalAlignment="Left" Margin="329,316,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="37" Width="29" FontFamily="Georgia Pro Black" />
-        <Label Content="2" HorizontalAlignment="Left" Margin="389,324,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="49" Width="43" FontFamily="Georgia Pro Black"
-               RenderTransformOrigin="0.296,0.478" />
-        <Label Content="3" HorizontalAlignment="Left" Margin="441,332,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="32" Width="43" FontFamily="Georgia Pro Black" />
-        <Label Content="1" HorizontalAlignment="Left" Margin="633,328,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="50" Width="43" FontFamily="Georgia Pro Black" />
-        <Label Content="2" HorizontalAlignment="Left" Margin="579,345,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="49" Width="43" FontFamily="Georgia Pro Black"
-               RenderTransformOrigin="0.296,0.478" />
-        <Label Content="3" HorizontalAlignment="Left" Margin="691,351,0,0" VerticalAlignment="Top" Foreground="White"
-               FontWeight="Bold" FontSize="24" Height="50" Width="42" FontFamily="Georgia Pro Black"
-               RenderTransformOrigin="1.58,0.344" Grid.ColumnSpan="2" />
-        <Image HorizontalAlignment="Left" Height="36" Margin="202,292,0,0" VerticalAlignment="Top" Width="45" />
-        <Rectangle HorizontalAlignment="Left" Height="124" Margin="124,47,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="498" />
+        <Rectangle HorizontalAlignment="Left" Height="147" Margin="50,148,0,0" Stroke="White" VerticalAlignment="Top"
+                   Width="201" StrokeThickness="4" RadiusY="2" RadiusX="2" Grid.Row="1" />
+        <Rectangle HorizontalAlignment="Left" Height="145" Margin="300,134,0,0" Stroke="White" VerticalAlignment="Top"
+                   Width="200" StrokeThickness="4" RadiusY="2" RadiusX="2" Grid.Row="1" />
+        <Rectangle HorizontalAlignment="Left" Height="147" Margin="549,148,0,0" Stroke="White" VerticalAlignment="Top"
+                   Width="201" StrokeThickness="4" RadiusX="2" RadiusY="2" Grid.ColumnSpan="2" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="36" Margin="202,198,0,0" VerticalAlignment="Top" Width="45" Grid.Row="1" />
+        <Rectangle HorizontalAlignment="Left" Height="124" Margin="113,47,0,0" Stroke="White" VerticalAlignment="Top"
+                   Width="554" Grid.RowSpan="2" />
         <Rectangle HorizontalAlignment="Left" Height="131" Margin="136,58,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="510" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="71,308,0,0" VerticalAlignment="Top" Width="43" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="131,277,0,0" VerticalAlignment="Top" Width="43" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="184,294,0,0" VerticalAlignment="Top" Width="43" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="318,267,0,0" VerticalAlignment="Top" Width="43" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="378,267,0,0" VerticalAlignment="Top" Width="44" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="441,292,0,0" VerticalAlignment="Top" Width="43" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="567,292,0,0" VerticalAlignment="Top" Width="43" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="622,292,0,0" VerticalAlignment="Top" Width="43" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="681,308,0,0" VerticalAlignment="Top" Width="43"
-               Grid.ColumnSpan="2" />
+                   Width="510" Grid.RowSpan="2" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="71,214,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="131,183,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="184,200,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="318,173,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="378,173,0,0" VerticalAlignment="Top" Width="44" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="441,198,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="567,198,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="622,198,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
+        <Image HorizontalAlignment="Left" Height="34" Margin="681,214,0,0" VerticalAlignment="Top" Width="43"
+               Grid.ColumnSpan="2" Grid.Row="1" />
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" />
         <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
@@ -118,7 +75,7 @@
                     ImageSource="/assets/UI/login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
             </Button.Background>
         </Button>
-        <Button x:Name="btn_Createacc" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="38,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.287,0.047" Width="32" Height="29" Click="btn_Createacc_Click">
+        <Button x:Name="btn_Createacc" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="38,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.287,0.047" Width="32" Height="29" Click="btn_Createacc_Click">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
@@ -126,6 +83,24 @@
                 <ImageBrush ImageSource="/Views/user.png"/>
             </Button.Background>
         </Button>
+        <Image HorizontalAlignment="Left" Height="73" Margin="58,242,0,0" VerticalAlignment="Top" Width="52" Source="/Views/trophy.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="82" Margin="102,210,0,0" VerticalAlignment="Top" Width="88" Source="/Views/award.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="184,229,0,0" VerticalAlignment="Top" Width="78" Source="/Views/sports-trophy.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="368,190,0,0" VerticalAlignment="Top" Width="83" Source="/Views/star (1).png" RenderTransformOrigin="0.519,0.394" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.93"/>
+                    <TranslateTransform X="0.137" Y="0.027"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="49" Margin="446,226,0,0" VerticalAlignment="Top" Width="72" Source="/Views/star (2).png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="300,213,0,0" VerticalAlignment="Top" Width="67" Source="/Views/star (3).png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="71" Margin="686,224,0,0" VerticalAlignment="Top" Width="80" Source="/Views/medal (1).png" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="93" Margin="603,200,0,0" VerticalAlignment="Top" Width="94" Source="/Views/gold-medal.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="68" Margin="558,240,0,0" VerticalAlignment="Top" Width="54" Source="/Views/medal.png" Grid.Row="1"/>
 
     </Grid>
 </Page>
