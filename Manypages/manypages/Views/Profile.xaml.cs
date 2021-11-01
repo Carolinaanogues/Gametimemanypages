@@ -3,6 +3,7 @@ using Microsoft.Win32;
 using System;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+
 //using System.Windows.Controls;
 //using System.Windows.Media.Imaging;
 
@@ -16,10 +17,8 @@ namespace manypages
         public Profile()
         {
             InitializeComponent();
-            
         }
 
-        
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
@@ -58,10 +57,7 @@ namespace manypages
                     Source = bitmapImage
                 };
                 imgdisplay.Source = img.Source;
-
-
             }
-
         }
     }
 }
