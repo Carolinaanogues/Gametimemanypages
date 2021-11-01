@@ -79,7 +79,7 @@
         <Button Content="Suprimer la compte" HorizontalAlignment="Left" Margin="509,395,0,0" VerticalAlignment="Top"
                 BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="144" Grid.ColumnSpan="3" />
         <Rectangle HorizontalAlignment="Left" Height="106" Margin="21,106,0,0" Stroke="Black" VerticalAlignment="Top" Width="161" StrokeThickness="2"/>
-        <Image x:Name="imgdisplay" HorizontalAlignment="Left" Height="100" Margin="26,106,0,0" VerticalAlignment="Top" Width="158" Source="/Views/star (2).png"/>
+        <Image x:Name="imgdisplay" HorizontalAlignment="Left" Height="100" Margin="26,106,0,0" VerticalAlignment="Top" Width="158" Source="/assets/UI/star (2).png"/>
         <Label x:Name="labelimg" Content="Label" HorizontalAlignment="Left" Margin="30,242,0,0" VerticalAlignment="Top" Width="425"/>
 
     </Grid>

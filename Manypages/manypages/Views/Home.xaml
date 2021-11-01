@@ -80,13 +80,13 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush ImageSource="/Views/user.png"/>
+                <ImageBrush ImageSource="/assets/UI/user.png"/>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="73" Margin="58,242,0,0" VerticalAlignment="Top" Width="52" Source="/Views/trophy.png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="82" Margin="102,210,0,0" VerticalAlignment="Top" Width="88" Source="/Views/award.png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="64" Margin="184,229,0,0" VerticalAlignment="Top" Width="78" Source="/Views/sports-trophy.png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="80" Margin="368,190,0,0" VerticalAlignment="Top" Width="83" Source="/Views/star (1).png" RenderTransformOrigin="0.519,0.394" Grid.Row="1">
+        <Image HorizontalAlignment="Left" Height="73" Margin="58,242,0,0" VerticalAlignment="Top" Width="52" Source="/assets/UI/trophy.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="82" Margin="102,210,0,0" VerticalAlignment="Top" Width="88" Source="/assets/UI/award.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="184,229,0,0" VerticalAlignment="Top" Width="78" Source="/assets/UI/sports-trophy.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="368,190,0,0" VerticalAlignment="Top" Width="83" Source="/assets/UI/star (1).png" RenderTransformOrigin="0.519,0.394" Grid.Row="1">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -96,11 +96,11 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image HorizontalAlignment="Left" Height="49" Margin="446,226,0,0" VerticalAlignment="Top" Width="72" Source="/Views/star (2).png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="66" Margin="300,213,0,0" VerticalAlignment="Top" Width="67" Source="/Views/star (3).png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="71" Margin="686,224,0,0" VerticalAlignment="Top" Width="80" Source="/Views/medal (1).png" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="93" Margin="603,200,0,0" VerticalAlignment="Top" Width="94" Source="/Views/gold-medal.png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="68" Margin="558,240,0,0" VerticalAlignment="Top" Width="54" Source="/Views/medal.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="49" Margin="446,226,0,0" VerticalAlignment="Top" Width="72" Source="/assets/UI/star (2).png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="300,213,0,0" VerticalAlignment="Top" Width="67" Source="/assets/UI/star (3).png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="71" Margin="686,224,0,0" VerticalAlignment="Top" Width="80" Source="/assets/UI/medal (1).png" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="93" Margin="603,200,0,0" VerticalAlignment="Top" Width="94" Source="/assets/UI/gold-medal.png" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="68" Margin="558,240,0,0" VerticalAlignment="Top" Width="54" Source="/assets/UI/medal.png" Grid.Row="1"/>
 
     </Grid>
 </Page>
