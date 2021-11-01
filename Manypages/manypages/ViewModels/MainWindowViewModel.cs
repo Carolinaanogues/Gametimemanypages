@@ -1,6 +1,6 @@
 ﻿namespace manypages.ViewModels
 {
-    public class VMMainWindow
+    public class MainWindowViewModel
     {
         
     }

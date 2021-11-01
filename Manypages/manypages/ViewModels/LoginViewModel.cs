@@ -1,6 +1,6 @@
 ﻿namespace manypages.ViewModels
 {
-    public class VMProfile
+    public class LoginViewModel
     {
         
     }

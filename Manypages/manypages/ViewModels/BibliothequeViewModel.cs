@@ -1,6 +1,6 @@
 ﻿namespace manypages.ViewModels
 {
-    public class VMHome
+    public class BibliothequeViewModel
     {
         
     }
