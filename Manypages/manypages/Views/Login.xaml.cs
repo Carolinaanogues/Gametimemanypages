@@ -11,14 +11,19 @@ namespace manypages
     {
         #region Properties
 
-        public ModelProfiles Profiles { get; set; } = new ModelProfiles();
+        public ModelProfiles Profiles { get; set; }
+        public ModelJeux Jeux { get; set; }
+        public ModelHistorique Historique { get; set; }
 
         #endregion
 
         #region Constructor
 
-        public Login()
+        public Login(ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
+            Profiles = mp;
+            Jeux = mj;
+            Historique = mh;
             InitializeComponent();
             Profiles.Add("admin", "admin", "admin", DateTime.Now, "a@a.com", "admin");
         }
@@ -38,13 +43,13 @@ namespace manypages
 
             ErrorLabel.Content = "";
 
-            NavigationService?.Navigate(new Home(Profiles.GetByUsername(usrTxt.Text)));
+            NavigationService?.Navigate(new Home(Profiles.GetByUsername(usrTxt.Text), Profiles, Jeux, Historique));
 
         }
 
         private void GoToCreateAccount(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Createaccount());
+            NavigationService?.Navigate(new Createaccount(Profiles, Jeux, Historique));
         }
 
         #endregion

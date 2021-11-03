@@ -8,11 +8,13 @@ namespace manypages
     /// </summary>
     public partial class Bibliotheque
     {
+        public ModelProfiles Profiles { get; set; }
         public Profil Profile { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
-        public Bibliotheque(Profil pf, ModelJeux mj, ModelHistorique mh)
+        public Bibliotheque(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
+            Profiles = mp;
             Profile = pf;
             IModelJeux = mj;
             IModelHistorique = mh;
@@ -22,22 +24,22 @@ namespace manypages
 
         private void btn_Home_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Home(Profile, IModelJeux, IModelHistorique));
+            NavigationService?.Navigate(new Home(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Biblio_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Bibliotheque(Profile, IModelJeux, IModelHistorique));
+            NavigationService?.Navigate(new Bibliotheque(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Historique_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Historique(Profile, IModelJeux, IModelHistorique));
+            NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Profile_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Profile(Profile, IModelJeux, IModelHistorique));
+            NavigationService?.Navigate(new Profile(Profile, Profiles, IModelJeux, IModelHistorique));
         }
     }
 }

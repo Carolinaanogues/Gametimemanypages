@@ -10,6 +10,7 @@ namespace manypages
     public partial class Home
     {
         public Profil Profile { get; set; }
+        public ModelProfiles Profiles { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
         public Home(Profil profile)
@@ -20,9 +21,10 @@ namespace manypages
             IModelHistorique = new ModelHistorique();
         }
 
-        public Home(Profil profile, ModelJeux mj, ModelHistorique mh)
+        public Home(Profil profile, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
             InitializeComponent();
+            Profiles = mp;
             Profile = profile;
             IModelJeux = mj;
             IModelHistorique = mh;
@@ -30,22 +32,22 @@ namespace manypages
 
         private void btn_Home_Copy_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Bibliotheque(Profile, IModelJeux, IModelHistorique));
+            NavigationService?.Navigate(new Bibliotheque(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Login());
+            NavigationService?.Navigate(new Login(Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Home_Copy1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Historique(Profile, IModelJeux, IModelHistorique));
+            NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Createacc_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Profile(Profile, IModelJeux, IModelHistorique));
+            NavigationService?.Navigate(new Profile(Profile, Profiles, IModelJeux, IModelHistorique));
         }
     }
 }
