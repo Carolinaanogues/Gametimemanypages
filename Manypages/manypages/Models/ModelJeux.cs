@@ -13,7 +13,16 @@ namespace manypages.Models
     {
         #region Properties
 
-        public static ObservableCollection<Jeuxvideo> Vgs { get; set; } = new ObservableCollection<Jeuxvideo>();
+        public ObservableCollection<Jeuxvideo> Vgs { get; set; }
+
+        #endregion
+
+        #region Constructors
+
+        public ModelJeux()
+        {
+            Vgs = new ObservableCollection<Jeuxvideo>();
+        }
 
         #endregion
 
@@ -24,14 +33,14 @@ namespace manypages.Models
         /// </summary>
         /// <param name="index">index where the object is in the list</param>
         /// <returns>Video game found</returns>
-        public static Jeuxvideo GetByIndex(int index) => Vgs[index];
+        public Jeuxvideo GetByIndex(int index) => Vgs[index];
 
         /// <summary>
         /// Get a video game by its Guid
         /// </summary>
         /// <param name="id">the guid to search</param>
         /// <returns>video game found</returns>
-        public static Jeuxvideo GetByGuid(Guid id) => Vgs.First(vg => vg.Id == id);
+        public Jeuxvideo GetByGuid(Guid id) => Vgs.First(vg => vg.Id == id);
 
         /// <summary>
         /// Add a new video game in the ObservableCollection
@@ -44,7 +53,7 @@ namespace manypages.Models
         /// <param name="pegi">PEGI 18 motherfucker</param>
         /// <param name="plateforme">Which plateforme the video game is</param>
         /// <param name="version">PAL or NTSC</param>
-        public static void Add(string nom, string description, string[] images, DateTime date, Genre genre, PEGI pegi,
+        public void Add(string nom, string description, string[] images, DateTime date, Genre genre, PEGI pegi,
             Plateforme plateforme, VersionPays version) =>
             Vgs.Add(new Jeuxvideo(nom, description, images, date, genre, pegi, plateforme, version));
 
@@ -60,7 +69,7 @@ namespace manypages.Models
         /// <param name="pegi">PEGI 18 motherfucker</param>
         /// <param name="plateforme">Which plateforme the video game is</param>
         /// <param name="version">PAL or NTSC</param>
-        public static void Update(int index, string nom, string description, string[] images, DateTime date,
+        public void Update(int index, string nom, string description, string[] images, DateTime date,
             Genre genre, PEGI pegi, Plateforme plateforme, VersionPays version)
         {
             if (index < 0)
@@ -80,13 +89,13 @@ namespace manypages.Models
         /// Delete a video game based on its index in the ObservableCollection
         /// </summary>
         /// <param name="index">where the video game at</param>
-        public static void Delete(int index) => Vgs.RemoveAt(index);
+        public void Delete(int index) => Vgs.RemoveAt(index);
 
         /// <summary>
         /// Set a video game to its default value based on its index
         /// </summary>
         /// <param name="index">where the video game at</param>
-        public static void Reset(int index)
+        public void Reset(int index)
         {
             Vgs[index].Nom = "";
             Vgs[index].Description = "";
@@ -107,7 +116,7 @@ namespace manypages.Models
         /// </summary>
         /// <param name="imgUri">the uri's image</param>
         /// <returns>The new path where the image is saved</returns>
-        public static string ResizeImage(Uri imgUri)
+        public string ResizeImage(Uri imgUri)
         {
             using Image image = Image.Load(imgUri.AbsolutePath);
             int width = image.Width / 2;
@@ -122,7 +131,7 @@ namespace manypages.Models
 
         #region Utils
 
-        private static string NewPath(Uri imgUri)
+        private string NewPath(Uri imgUri)
         {
             Random random = new Random();
             byte[] buffer = new byte[16];
