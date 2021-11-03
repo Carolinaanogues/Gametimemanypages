@@ -65,16 +65,20 @@ namespace manypages
 
         private void SetFinished(object sender, RoutedEventArgs e)
         {
-            ObjectStructure.Objects.Historique hist = (ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem;
-            hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, Status.Finished);
+            UpdateStatus((ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem, Status.Finished);
             btn_Historique_Click(sender, e);
         }
 
         private void SetInProgress(object sender, RoutedEventArgs e)
         {
-            ObjectStructure.Objects.Historique hist = (ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem;
-            hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, Status.InProgress);
+            UpdateStatus((ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem, Status.InProgress);
             btn_Historique_Click(sender, e);
+        }
+
+        private void UpdateStatus(ObjectStructure.Objects.Historique hist, Status status)
+        {
+            if (hist != null)
+                hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, status);
         }
     }
 }
