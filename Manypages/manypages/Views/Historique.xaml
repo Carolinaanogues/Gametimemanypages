@@ -31,7 +31,7 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <ComboBox HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="120" Height="19" ItemsSource="{Binding IModelJeux.Vgs}">
+        <ComboBox x:Name="SavedGameCB" HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="120" Height="19" ItemsSource="{Binding IModelJeux.Vgs}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Nom}"/>
