@@ -2,7 +2,6 @@
 using System.Windows;
 using manypages.Models;
 using manypages.ObjectStructure.Enums;
-using manypages.ObjectStructure.Objects;
 
 namespace manypages
 {
@@ -21,7 +20,7 @@ namespace manypages
             Profiles = mp;
             IModelJeux = mj;
             IModelJeux.Add("test1", "asdf", new []{"", ""}, DateTime.Now, Genre.FPS, PEGI.PEGI3, Plateforme.Switch, VersionPays.PAL);
-            IModelHistorique = mh;
+            IModelHistorique = new ModelHistorique();
             InitializeComponent();
         }
 

@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using manypages.Models;
-using manypages.ObjectStructure.Objects;
 
 namespace manypages
 {

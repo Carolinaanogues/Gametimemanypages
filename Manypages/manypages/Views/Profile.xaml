@@ -28,7 +28,7 @@
                 Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Biblio_Click" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0" Click="btn_Historique_Click" />
-        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
+        <Button x:Name="btn_Profile" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="191,5,0,0" Click="btn_Profile_Click" />
 
         <GridSplitter HorizontalAlignment="Left" Height="461" Margin="243,-154,0,0" VerticalAlignment="Top" Width="5"

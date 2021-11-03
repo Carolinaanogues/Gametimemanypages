@@ -3,8 +3,6 @@ using Microsoft.Win32;
 using System;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using manypages.Models;
-using manypages.ObjectStructure.Objects;
 
 //using System.Windows.Controls;
 //using System.Windows.Media.Imaging;
