@@ -60,7 +60,7 @@
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0"
                 Click="btn_Home_Click" />
-        <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
+        <Button x:Name="btn_Biblio" Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="81" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Biblio_Click" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="78" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="136,5,0,0" Click="btn_Historique_Click" />
