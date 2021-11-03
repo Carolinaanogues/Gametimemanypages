@@ -95,5 +95,15 @@ namespace manypages
             GamePlateformCB.SelectedItem = null;
             GameVersionCB.SelectedItem = null;
         }
+
+        private void GameDescTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void GameLibraryLV_PreviewMouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

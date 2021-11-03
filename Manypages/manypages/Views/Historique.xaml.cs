@@ -24,8 +24,6 @@ namespace manypages
             Profile = pf;
             Profiles = mp;
             IModelJeux = mj;
-            IModelJeux.Add("test1", "asdf", new[] { "", "" }, DateTime.Now, Genre.FPS, PEGI.PEGI3, Plateforme.Switch,
-                VersionPays.PAL);
             IModelHistorique = mh;
             IModelHistorique.Display =
                 new ObservableCollection<ObjectStructure.Objects.Historique>(IModelHistorique.Hist
