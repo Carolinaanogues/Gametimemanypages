@@ -55,6 +55,8 @@ namespace manypages
         private void AddGameToHistorique(object sender, RoutedEventArgs e)
         {
             Jeuxvideo vg = (Jeuxvideo)ComboBoxGame.SelectedItem;
+            if (vg == null)
+                return;
             ObjectStructure.Objects.Historique hist =
                 new ObjectStructure.Objects.Historique(Profile, new Tuple<Jeuxvideo, Status>(vg, Status.Started));
             IModelHistorique.AddGame(hist);
