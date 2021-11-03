@@ -14,17 +14,9 @@
             <ColumnDefinition Width="143*" />
             <ColumnDefinition Width="17*" />
         </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Left" Height="635" Margin="-8,25,0,0" VerticalAlignment="Top" Width="866"
+        <Image HorizontalAlignment="Left" Height="634" Margin="-32,-89,0,0" VerticalAlignment="Top" Width="866"
                Source="/assets/UI/543fc7c85e3bcb0730e6c3264e9b4458.png" Grid.ColumnSpan="2" Opacity="0.9"
                OpacityMask="Black" Grid.RowSpan="2" />
-
-        <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="132" Margin="567,134,0,0" Stroke="White"
-                   VerticalAlignment="Top" Width="200" StrokeThickness="0.5" Grid.Row="1" />
-
-        <Rectangle HorizontalAlignment="Left" Height="140" Margin="35,134,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="192" StrokeThickness="0.5" Grid.Row="1" />
-        <Rectangle HorizontalAlignment="Left" Height="128" Margin="284,119,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="231" StrokeThickness="0.5" Grid.Row="1" />
 
         <Label Content="GAME TIME " HorizontalAlignment="Left" Margin="156,58,0,0" VerticalAlignment="Top"
                FontWeight="Bold" FontStyle="Italic" FontFamily="Gill Sans Nova Cond XBd" FontSize="100" Height="124"
@@ -33,38 +25,21 @@
                 <DropShadowEffect />
             </Label.Effect>
         </Label>
-        <Rectangle HorizontalAlignment="Left" Height="147" Margin="50,148,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="201" StrokeThickness="4" RadiusY="2" RadiusX="2" Grid.Row="1" />
-        <Rectangle HorizontalAlignment="Left" Height="145" Margin="300,134,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="200" StrokeThickness="4" RadiusY="2" RadiusX="2" Grid.Row="1" />
-        <Rectangle HorizontalAlignment="Left" Height="147" Margin="549,148,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="201" StrokeThickness="4" RadiusX="2" RadiusY="2" Grid.ColumnSpan="2" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="36" Margin="202,198,0,0" VerticalAlignment="Top" Width="45" Grid.Row="1" />
-        <Rectangle HorizontalAlignment="Left" Height="124" Margin="113,47,0,0" Stroke="White" VerticalAlignment="Top"
-                   Width="554" Grid.RowSpan="2" />
         <Rectangle HorizontalAlignment="Left" Height="131" Margin="136,58,0,0" Stroke="White" VerticalAlignment="Top"
                    Width="510" Grid.RowSpan="2" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="71,214,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="131,183,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="184,200,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="318,173,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="378,173,0,0" VerticalAlignment="Top" Width="44" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="441,198,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="567,198,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="34" Margin="622,198,0,0" VerticalAlignment="Top" Width="43" Grid.Row="1" />
         <Image HorizontalAlignment="Left" Height="34" Margin="681,214,0,0" VerticalAlignment="Top" Width="43"
                Grid.ColumnSpan="2" Grid.Row="1" />
-        <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" />
+        <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84"
+                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="145,221,0,0" Click="btn_Home_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" Padding="1,0,1,1" />
         <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0"
-                Click="btn_Home_Copy_Click" />
+                Width="141" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="244,220,0,0"
+                Click="btn_Home_Copy_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0"
-                Click="btn_Home_Copy1_Click" />
-        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="191,5,0,0"
-                Click="btn_Home_Copy2_Click" />
+                Width="112" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="405,220,0,0"
+                Click="btn_Home_Copy1_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" />
+        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85"
+                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="541,218,0,0"
+                Click="btn_Home_Copy2_Click" Grid.Row="1" FontWeight="Bold" FontSize="20" />
         <Button x:Name="btn_login" Content="" HorizontalAlignment="Left" Margin="707,33,0,0" VerticalAlignment="Top"
                 Width="36" Height="32" Grid.ColumnSpan="2" Click="btn_login_Click">
             <Button.BorderBrush>
@@ -83,24 +58,6 @@
                 <ImageBrush ImageSource="/assets/UI/user.png"/>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="73" Margin="58,242,0,0" VerticalAlignment="Top" Width="52" Source="/assets/UI/trophy.png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="82" Margin="102,210,0,0" VerticalAlignment="Top" Width="88" Source="/assets/UI/award.png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="64" Margin="184,229,0,0" VerticalAlignment="Top" Width="78" Source="/assets/UI/sports-trophy.png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="80" Margin="368,190,0,0" VerticalAlignment="Top" Width="83" Source="/assets/UI/star (1).png" RenderTransformOrigin="0.519,0.394" Grid.Row="1">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.93"/>
-                    <TranslateTransform X="0.137" Y="0.027"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image HorizontalAlignment="Left" Height="49" Margin="446,226,0,0" VerticalAlignment="Top" Width="72" Source="/assets/UI/star (2).png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="66" Margin="300,213,0,0" VerticalAlignment="Top" Width="67" Source="/assets/UI/star (3).png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="71" Margin="686,224,0,0" VerticalAlignment="Top" Width="80" Source="/assets/UI/medal (1).png" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="93" Margin="603,200,0,0" VerticalAlignment="Top" Width="94" Source="/assets/UI/gold-medal.png" Grid.Row="1"/>
-        <Image HorizontalAlignment="Left" Height="68" Margin="558,240,0,0" VerticalAlignment="Top" Width="54" Source="/assets/UI/medal.png" Grid.Row="1"/>
 
     </Grid>
 </Page>
