@@ -1,4 +1,10 @@
-﻿namespace manypages
+﻿using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using System;
+using System.Windows;
+using Microsoft.Win32;
+
+namespace manypages
 {
     /// <summary>
     /// Logique d'interaction pour Window1.xaml
@@ -33,6 +39,16 @@
         private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            
+            }
         }
     }
 }

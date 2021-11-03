@@ -12,7 +12,7 @@
                 Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Biblio_Click" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0" Click="btn_Historique_Click" />
-        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
+        <Button x:Name="btn_Profile" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="191,5,0,0" Click="btn_Profile_Click" />
         <ListView x:Name="GameLibraryLV" Margin="0,186,0,0">
             <ListView.View>
@@ -51,5 +51,7 @@
         <ComboBox x:Name="GamePEGICB" HorizontalAlignment="Left" Margin="586,120,0,0" VerticalAlignment="Top" Width="96" Height="13"/>
         <ComboBox x:Name="GameVersionCB" HorizontalAlignment="Left" Margin="586,144,0,0" VerticalAlignment="Top" Width="96" Height="13"/>
         <DatePicker x:Name="ReleaseDateDP" HorizontalAlignment="Left" Margin="59,133,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_putimg" Content="Chercher une image..." HorizontalAlignment="Left" Margin="586,69,0,0" VerticalAlignment="Top"
+            BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="113" Click="Button_Click" Height="18" />
     </Grid>
 </Page>
