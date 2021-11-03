@@ -62,5 +62,19 @@ namespace manypages
             IModelHistorique.AddGame(hist);
             btn_Historique_Click(sender, e);
         }
+
+        private void SetFinished(object sender, RoutedEventArgs e)
+        {
+            ObjectStructure.Objects.Historique hist = (ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem;
+            hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, Status.Finished);
+            btn_Historique_Click(sender, e);
+        }
+
+        private void SetInProgress(object sender, RoutedEventArgs e)
+        {
+            ObjectStructure.Objects.Historique hist = (ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem;
+            hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, Status.InProgress);
+            btn_Historique_Click(sender, e);
+        }
     }
 }
