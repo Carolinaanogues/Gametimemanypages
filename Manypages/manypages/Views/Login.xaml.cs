@@ -34,7 +34,6 @@ namespace manypages
 
         private void LogToApp(object sender, System.Windows.RoutedEventArgs e)
         {
-            
             if (!Profiles.UserLogin(usrTxt.Text, psswrdTxt.Password))
             {
                 ErrorLabel.Content = "Nom d'utilisateur ou mot de passe invalide";
@@ -44,7 +43,6 @@ namespace manypages
             ErrorLabel.Content = "";
 
             NavigationService?.Navigate(new Home(Profiles.GetByUsername(usrTxt.Text), Profiles, Jeux, Historique));
-
         }
 
         private void GoToCreateAccount(object sender, System.Windows.RoutedEventArgs e)

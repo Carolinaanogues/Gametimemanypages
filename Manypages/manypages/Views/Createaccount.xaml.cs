@@ -11,6 +11,7 @@ namespace manypages
         public ModelProfiles Profiles { get; set; }
         public ModelJeux Jeux { get; set; }
         public ModelHistorique Historique { get; set; }
+
         public Createaccount(ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
             Profiles = mp;
@@ -28,9 +29,8 @@ namespace manypages
 
         private void CreateAccount(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (CheckEmpty(txtNickname.Text) || CheckEmpty(pwdPassword.Password)
-                || CheckEmpty(txtName.Text) || CheckEmpty(txtFirstName.Text)
-                || CheckEmpty(dpBirthDate.Text) || CheckEmpty(txtEmail.Text))
+            if (CheckEmpty(txtNickname.Text) || CheckEmpty(pwdPassword.Password) || CheckEmpty(txtName.Text) ||
+                CheckEmpty(txtFirstName.Text) || CheckEmpty(dpBirthDate.Text) || CheckEmpty(txtEmail.Text))
             {
                 lblErr1.Content = "Veuillez remplir tous les champs !";
                 return;
@@ -43,14 +43,13 @@ namespace manypages
             catch (InvalidOperationException)
             {
                 //Profil NewProfile = new Profil(txtNickname.Text, txtName.Text, txtFirstName.Text, DateTime.Parse(dpBirthDate.Text), txtEmail.Text, pwdPassword.Password);
-                Profiles.Add(txtNickname.Text, txtName.Text, txtFirstName.Text, DateTime.Parse(dpBirthDate.Text), txtEmail.Text, pwdPassword.Password);
+                Profiles.Add(txtNickname.Text, txtName.Text, txtFirstName.Text, DateTime.Parse(dpBirthDate.Text),
+                    txtEmail.Text, pwdPassword.Password);
                 NavigationService?.Navigate(new Login(Profiles, Jeux, Historique));
                 return;
             }
 
             lblErr1.Content = "Le pseudo existe déjà.";
-
-
         }
 
         private bool CheckEmpty(string txt)

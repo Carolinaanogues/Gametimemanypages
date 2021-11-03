@@ -19,6 +19,7 @@ namespace manypages
         public Profil Profile { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
+
         public Bibliotheque(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
             Profiles = mp;
@@ -26,7 +27,7 @@ namespace manypages
             IModelJeux = mj;
             IModelHistorique = mh;
             DataContext = this;
-            
+
             InitializeComponent();
 
             GamePlateformCB.ItemsSource = Enum.GetValues(typeof(Plateforme)).Cast<Plateforme>();
@@ -58,28 +59,27 @@ namespace manypages
         private void AddGameBtn_Click(object sender, RoutedEventArgs e)
         {
             IModelJeux.Add(
-                             GameNameTB.Text,
-                             GameDescTB.Text,
-                             new[] { "", "" },
-                             ReleaseDateDP.SelectedDate.Value,
-                             (Genre)GameGenderCB.SelectedItem,
-                             (PEGI)GamePEGICB.SelectedItem,
-                             (Plateforme)GamePlateformCB.SelectedItem,
-                             (VersionPays)GameVersionCB.SelectedItem
-                          );
+                GameNameTB.Text,
+                GameDescTB.Text,
+                new[] { "", "" },
+                ReleaseDateDP.SelectedDate.Value,
+                (Genre)GameGenderCB.SelectedItem,
+                (PEGI)GamePEGICB.SelectedItem,
+                (Plateforme)GamePlateformCB.SelectedItem,
+                (VersionPays)GameVersionCB.SelectedItem
+            );
             ResetFieldValue();
         }
 
 
         private void RemoveGameBtn_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void EditGameBtn_Click(object sender, RoutedEventArgs e)
         {
-
         }
+
         private void ResetFieldBtn_Click(object sender, RoutedEventArgs e)
         {
             ResetFieldValue();

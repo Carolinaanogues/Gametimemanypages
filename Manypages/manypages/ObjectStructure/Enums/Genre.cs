@@ -28,6 +28,5 @@
         HORREUR,
 
         BATTLEROYALE
-        
     }
 }
