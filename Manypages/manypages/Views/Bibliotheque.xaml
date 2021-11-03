@@ -8,7 +8,7 @@
     <Grid >
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" />
-        <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
+        <Button x:Name="btn_Biblio" Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Biblio_Click" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0" Click="btn_Historique_Click" />
@@ -28,7 +28,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" FontWeight="Bold" FontSize="30" Margin="8,15,0,0"/>
+        <Label Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" FontWeight="Bold" FontSize="30" Margin="8,15,0,0"/>
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="11,66,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Description :" HorizontalAlignment="Left" Margin="8,101,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Date :" HorizontalAlignment="Left" Margin="11,131,0,0" VerticalAlignment="Top" FontWeight="Bold"/>

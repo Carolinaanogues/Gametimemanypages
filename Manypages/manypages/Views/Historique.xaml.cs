@@ -44,5 +44,10 @@ namespace manypages
         {
             NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
         }
+
+        private void AddGameBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
