@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using manypages.Models;
+using manypages.ObjectStructure.Objects;
 
 namespace manypages
 {
@@ -7,14 +9,28 @@ namespace manypages
     /// </summary>
     public partial class Home
     {
-        public Home()
+        public Profil Profile { get; set; }
+        public ModelJeux IModelJeux { get; set; }
+        public ModelHistorique IModelHistorique { get; set; }
+        public Home(Profil profile)
         {
             InitializeComponent();
+            Profile = profile;
+            IModelJeux = new ModelJeux();
+            IModelHistorique = new ModelHistorique();
+        }
+
+        public Home(Profil profile, ModelJeux mj, ModelHistorique mh)
+        {
+            InitializeComponent();
+            Profile = profile;
+            IModelJeux = mj;
+            IModelHistorique = mh;
         }
 
         private void btn_Home_Copy_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Bibliotheque());
+            NavigationService?.Navigate(new Bibliotheque(Profile, IModelJeux, IModelHistorique));
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
@@ -24,17 +40,12 @@ namespace manypages
 
         private void btn_Home_Copy1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Historique());
+            NavigationService?.Navigate(new Historique(Profile, IModelJeux, IModelHistorique));
         }
 
         private void btn_Createacc_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Profile());
-        }
-
-        private void btn_Home_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Home());
+            NavigationService?.Navigate(new Profile(Profile, IModelJeux, IModelHistorique));
         }
     }
 }

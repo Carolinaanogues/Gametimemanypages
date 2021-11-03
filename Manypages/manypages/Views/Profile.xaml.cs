@@ -3,6 +3,8 @@ using Microsoft.Win32;
 using System;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using manypages.Models;
+using manypages.ObjectStructure.Objects;
 
 //using System.Windows.Controls;
 //using System.Windows.Media.Imaging;
@@ -14,30 +16,37 @@ namespace manypages
     /// </summary>
     public partial class Profile
     {
-        public Profile()
+        public Profil IProfile { get; set; }
+        public ModelHistorique IModelHistorique { get; set; }
+        public ModelJeux IModelJeux { get; set; }
+        
+        public Profile(Profil pf, ModelJeux mj, ModelHistorique mh)
         {
+            IProfile = pf;
+            IModelJeux = mj;
+            IModelHistorique = mh;
             InitializeComponent();
         }
 
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Home());
+            NavigationService?.Navigate(new Home(IProfile, IModelJeux, IModelHistorique));
         }
 
         private void btn_Biblio_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Bibliotheque());
+            NavigationService?.Navigate(new Bibliotheque(IProfile, IModelJeux, IModelHistorique));
         }
 
         private void btn_Historique_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Historique());
+            NavigationService?.Navigate(new Historique(IProfile, IModelJeux, IModelHistorique));
         }
 
         private void btn_Profile_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Profile());
+            NavigationService?.Navigate(new Profile(IProfile, IModelJeux, IModelHistorique));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
