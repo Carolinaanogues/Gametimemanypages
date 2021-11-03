@@ -3,6 +3,8 @@ using Microsoft.Win32;
 using System;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using manypages.Models;
+using manypages.ObjectStructure.Objects;
 
 //using System.Windows.Controls;
 //using System.Windows.Media.Imaging;
@@ -14,6 +16,11 @@ namespace manypages
     /// </summary>
     public partial class Profile
     {
+        private ObjectStructure.Objects.Profil profile;
+        private ModelProfiles profiles;
+        private ModelJeux modelJeux;
+        private ModelHistorique modelHistorique;
+
         public Profil IProfile { get; set; }
         public ModelProfiles Profiles { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
@@ -27,7 +34,6 @@ namespace manypages
             IModelHistorique = mh;
             InitializeComponent();
         }
-
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
