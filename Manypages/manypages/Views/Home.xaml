@@ -33,11 +33,8 @@
                 Width="141" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="156,220,0,0"
                 Click="btn_Home_Copy_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="112" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="344,220,0,0"
+                Width="112" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="514,220,0,0"
                 Click="btn_Home_Copy1_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" />
-        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="506,220,0,0"
-                Click="btn_Home_Copy2_Click" Grid.Row="1" FontWeight="Bold" FontSize="20" Height="28" />
         <Button x:Name="btn_login" Content="" HorizontalAlignment="Left" Margin="707,33,0,0" VerticalAlignment="Top"
                 Width="36" Height="32" Grid.ColumnSpan="2" Click="btn_login_Click">
             <Button.BorderBrush>
