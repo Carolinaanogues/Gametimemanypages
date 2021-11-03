@@ -14,12 +14,12 @@
             <ColumnDefinition Width="143*" />
             <ColumnDefinition Width="17*" />
         </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Left" Height="634" Margin="-32,-89,0,0" VerticalAlignment="Top" Width="866"
+        <Image HorizontalAlignment="Left" Height="634" Margin="-23,-98,0,0" VerticalAlignment="Top" Width="866"
                Source="/assets/UI/543fc7c85e3bcb0730e6c3264e9b4458.png" Grid.ColumnSpan="2" Opacity="0.9"
                OpacityMask="Black" Grid.RowSpan="2" />
 
         <Label Content="GAME TIME " HorizontalAlignment="Left" Margin="156,58,0,0" VerticalAlignment="Top"
-               FontWeight="Bold" FontStyle="Italic" FontFamily="Gill Sans Nova Cond XBd" FontSize="100" Height="124"
+               FontWeight="Bold" FontStyle="Italic" FontFamily="Impact" FontSize="100" Height="124"
                Width="470" Foreground="#FFF7F7F7" Grid.RowSpan="2">
             <Label.Effect>
                 <DropShadowEffect />
@@ -29,17 +29,15 @@
                    Width="510" Grid.RowSpan="2" />
         <Image HorizontalAlignment="Left" Height="34" Margin="681,214,0,0" VerticalAlignment="Top" Width="43"
                Grid.ColumnSpan="2" Grid.Row="1" />
-        <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="145,221,0,0" Click="btn_Home_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" Padding="1,0,1,1" />
         <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="141" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="244,220,0,0"
+                Width="141" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="156,220,0,0"
                 Click="btn_Home_Copy_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="112" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="405,220,0,0"
+                Width="112" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="344,220,0,0"
                 Click="btn_Home_Copy1_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" />
-        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="541,218,0,0"
-                Click="btn_Home_Copy2_Click" Grid.Row="1" FontWeight="Bold" FontSize="20" />
+        <Button x:Name="btn_Profile" Content="Profile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86"
+                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="506,220,0,0"
+                Click="btn_Home_Copy2_Click" Grid.Row="1" FontWeight="Bold" FontSize="20" Height="28" />
         <Button x:Name="btn_login" Content="" HorizontalAlignment="Left" Margin="707,33,0,0" VerticalAlignment="Top"
                 Width="36" Height="32" Grid.ColumnSpan="2" Click="btn_login_Click">
             <Button.BorderBrush>
