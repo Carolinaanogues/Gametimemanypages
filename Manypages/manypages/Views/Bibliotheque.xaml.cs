@@ -11,44 +11,38 @@ namespace manypages
     /// </summary>
     public partial class Bibliotheque
     {
-        public Bibliotheque()
+        public ModelProfiles Profiles { get; set; }
+        public Profil Profile { get; set; }
+        public ModelJeux IModelJeux { get; set; }
+        public ModelHistorique IModelHistorique { get; set; }
+        public Bibliotheque(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
+            Profiles = mp;
+            Profile = pf;
+            IModelJeux = mj;
+            IModelHistorique = mh;
+            DataContext = this;
             InitializeComponent();
         }
 
         private void btn_Home_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Home());
+            NavigationService?.Navigate(new Home(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Biblio_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Bibliotheque());
+            NavigationService?.Navigate(new Bibliotheque(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Historique_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Historique());
+            NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Profile_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Profile());
-        }
-
-        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-            {
-                openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-            
-            }
+            NavigationService?.Navigate(new Profile(Profile, Profiles, IModelJeux, IModelHistorique));
         }
     }
 }

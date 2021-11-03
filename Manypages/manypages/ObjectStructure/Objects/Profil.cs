@@ -16,7 +16,6 @@ namespace manypages.ObjectStructure.Objects
         public DateTime BirthDate { get; set; }
         public string Email { get; set; }
         public string MotDePasse { get; set; }
-        public bool Connected { get; set; }
 
         #endregion
 
@@ -31,7 +30,6 @@ namespace manypages.ObjectStructure.Objects
             BirthDate = birthDate;
             Email = email;
             MotDePasse = motDePasse;
-            Connected = false;
         }
 
         #endregion

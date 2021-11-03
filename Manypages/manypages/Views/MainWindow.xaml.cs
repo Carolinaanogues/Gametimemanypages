@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using manypages.Models;
 
 namespace manypages
 {
@@ -7,6 +8,9 @@ namespace manypages
     /// </summary>
     public partial class MainWindow
     {
+        public ModelProfiles Profiles { get; set; }
+        public ModelJeux Jeux { get; set; }
+        public ModelHistorique Historique { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -15,7 +19,7 @@ namespace manypages
 
         private void MyWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            frame.NavigationService.Navigate(new Login());
+            frame.NavigationService.Navigate(new Login(Profiles, Jeux, Historique));
         }
     }
 }

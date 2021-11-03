@@ -14,50 +14,57 @@ namespace manypages
     /// </summary>
     public partial class Profile
     {
-        public Profile()
+        public Profil IProfile { get; set; }
+        public ModelProfiles Profiles { get; set; }
+        public ModelHistorique IModelHistorique { get; set; }
+        public ModelJeux IModelJeux { get; set; }
+        
+        public Profile(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
+            Profiles = mp;
+            IProfile = pf;
+            IModelJeux = mj;
+            IModelHistorique = mh;
             InitializeComponent();
         }
 
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Home());
+            NavigationService?.Navigate(new Home(IProfile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Biblio_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Bibliotheque());
+            NavigationService?.Navigate(new Bibliotheque(IProfile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Historique_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Historique());
+            NavigationService?.Navigate(new Historique(IProfile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Profile_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Profile());
+            NavigationService?.Navigate(new Profile(IProfile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-            {
-                openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-                labelimg.Content = openFileDialog.FileName;
+            if (openFileDialog.ShowDialog() != true) return;
+            openFileDialog.Filter = "Image files (*.png)|(*.jpg)";
+            labelimg.Content = openFileDialog.FileName;
 
-                BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.BeginInit();
-                bitmapImage.UriSource = new Uri(openFileDialog.FileName);
-                bitmapImage.EndInit();
-                Image img = new Image
-                {
-                    Source = bitmapImage
-                };
-                imgdisplay.Source = img.Source;
-            }
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri(openFileDialog.FileName);
+            bitmapImage.EndInit();
+            Image img = new Image
+            {
+                Source = bitmapImage
+            };
+            imgdisplay.Source = img.Source;
         }
     }
 }

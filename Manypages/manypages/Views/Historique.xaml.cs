@@ -10,12 +10,15 @@ namespace manypages
     /// </summary>
     public partial class Historique
     {
+        public Profil Profile { get; set; }
+        public ModelProfiles Profiles { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
-        public Historique()
+        public Historique(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
             DataContext = this;
-            IModelJeux = new ModelJeux();
+            Profiles = mp;
+            IModelJeux = mj;
             IModelJeux.Add("test1", "asdf", new []{"", ""}, DateTime.Now, Genre.FPS, PEGI.PEGI3, Plateforme.Switch, VersionPays.PAL);
             IModelHistorique = new ModelHistorique();
             InitializeComponent();
@@ -23,27 +26,22 @@ namespace manypages
 
         private void btn_Home_Copy2_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Profile());
+            NavigationService?.Navigate(new Profile(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Home());
+            NavigationService?.Navigate(new Home(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Biblio_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Bibliotheque());
+            NavigationService?.Navigate(new Bibliotheque(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
         private void btn_Historique_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Historique());
-        }
-
-        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-
+            NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
         }
     }
 }
