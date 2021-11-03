@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using manypages.Models;
 using manypages.ObjectStructure.Enums;
@@ -15,13 +17,20 @@ namespace manypages
         public ModelProfiles Profiles { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
+
         public Historique(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
             DataContext = this;
+            Profile = pf;
             Profiles = mp;
             IModelJeux = mj;
-            IModelJeux.Add("test1", "asdf", new []{"", ""}, DateTime.Now, Genre.FPS, PEGI.PEGI3, Plateforme.Switch, VersionPays.PAL);
-            IModelHistorique = new ModelHistorique();
+            IModelJeux.Add("test1", "asdf", new[] { "", "" }, DateTime.Now, Genre.FPS, PEGI.PEGI3, Plateforme.Switch,
+                VersionPays.PAL);
+            IModelHistorique = mh;
+            IModelHistorique.Display =
+                new ObservableCollection<ObjectStructure.Objects.Historique>(IModelHistorique.Hist
+                    .Where(o => o.Profile.Id == Profile.Id).ToList());
+            IModelHistorique.ConnectedProfile = Profile;
             InitializeComponent();
         }
 
@@ -45,9 +54,13 @@ namespace manypages
             NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
-        private void AddGameBtn_Click(object sender, RoutedEventArgs e)
+        private void AddGameToHistorique(object sender, RoutedEventArgs e)
         {
-
+            Jeuxvideo vg = (Jeuxvideo)ComboBoxGame.SelectedItem;
+            ObjectStructure.Objects.Historique hist =
+                new ObjectStructure.Objects.Historique(Profile, new Tuple<Jeuxvideo, Status>(vg, Status.Started));
+            IModelHistorique.AddGame(hist);
+            btn_Historique_Click(sender, e);
         }
     }
 }
