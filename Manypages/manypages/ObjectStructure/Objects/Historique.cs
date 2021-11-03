@@ -16,13 +16,13 @@ namespace manypages.ObjectStructure.Objects
         /// <summary>
         /// 1st element: Jeuxvideo, 2nd element: Status enum
         /// </summary>
-        public ObservableCollection<Tuple<Jeuxvideo, Status>> Games { get; set; }
+        public Tuple<Jeuxvideo, Status> Games { get; set; }
 
         #endregion
 
         #region Constructors
 
-        public Historique(Profil profile, ObservableCollection<Tuple<Jeuxvideo, Status>> games)
+        public Historique(Profil profile, Tuple<Jeuxvideo, Status> games)
         {
             Profile = profile;
             Games = games;

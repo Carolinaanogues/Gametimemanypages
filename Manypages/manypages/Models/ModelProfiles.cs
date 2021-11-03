@@ -15,6 +15,11 @@ namespace manypages.Models
 
         #region CRUDJeuxvideo
 
+        public int GetIndex(Profil pf)
+        {
+            return Profiles.IndexOf(Profiles.First(p => p.Id == pf.Id));
+        }
+
         /// <summary>
         /// Get a user by its index in the ObservableCollection
         /// </summary>
