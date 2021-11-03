@@ -31,14 +31,8 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <ComboBox HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="120" Height="19" />
-        <ComboBox HorizontalAlignment="Left" Margin="154,80,0,0" VerticalAlignment="Top" Width="120" Height="18" />
-        <ComboBox HorizontalAlignment="Left" Margin="289,80,0,0" VerticalAlignment="Top" Width="120" Height="18" />
-        <ComboBox HorizontalAlignment="Left" Margin="424,80,0,0" VerticalAlignment="Top" Width="120" Height="18" />
-        <Label Content="Jeux" HorizontalAlignment="Left" Margin="19,62,0,0" VerticalAlignment="Top" />
-        <Label Content="Platforme" HorizontalAlignment="Left" Margin="155,62,0,0" VerticalAlignment="Top" />
-        <Label Content="Genre" HorizontalAlignment="Left" Margin="289,62,0,0" VerticalAlignment="Top" />
-        <Label Content="Status" HorizontalAlignment="Left" Margin="424,62,0,0" VerticalAlignment="Top" />
+        <ComboBox x:Name="SavedGameBtn" HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="120" Height="19" />
+        <Label Content="Jeux" HorizontalAlignment="Left" Margin="19,58,0,0" VerticalAlignment="Top" />
         <ListView Margin="0,104,0,0">
             <ListView.View>
                 <GridView>
@@ -46,11 +40,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Finis" HorizontalAlignment="Left" Margin="507,42,0,0" VerticalAlignment="Top"
+        <Button x:Name="FinishBtn" Content="Finis" HorizontalAlignment="Left" Margin="507,42,0,0" VerticalAlignment="Top"
                 Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="53" />
-        <Button Content="Ajouter jeux" HorizontalAlignment="Left" Margin="370,42,0,0" VerticalAlignment="Top"
+        <Button x:Name="AddGameBtn" Content="Ajouter jeux" HorizontalAlignment="Left" Margin="370,42,0,0" VerticalAlignment="Top"
                 Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="76" />
-        <Button Content="En cours" HorizontalAlignment="Left" Margin="451,42,0,0" VerticalAlignment="Top"
+        <Button x:Name="InProgressBtn" Content="En cours" HorizontalAlignment="Left" Margin="451,42,0,0" VerticalAlignment="Top"
                 Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="54" />
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0"
