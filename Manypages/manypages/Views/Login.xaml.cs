@@ -38,7 +38,7 @@ namespace manypages
 
             ErrorLabel.Content = "";
 
-            NavigationService?.Navigate(new Home());
+            NavigationService?.Navigate(new Home(Profiles.GetByUsername(usrTxt.Text)));
 
         }
 

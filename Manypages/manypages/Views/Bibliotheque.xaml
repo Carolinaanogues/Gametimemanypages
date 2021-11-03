@@ -44,7 +44,7 @@
         <Button x:Name="RemoveGameBtn" Content="Retirer" HorizontalAlignment="Left" Margin="318,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="43"/>
         <Button x:Name="EditGameBtn" Content="Editer" HorizontalAlignment="Left" Margin="366,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="44"/>
         <Button x:Name="ResetFieldBtn" Content="Reset " HorizontalAlignment="Left" Margin="415,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="46"/>
-        <TextBox x:Name="GameNameTB" HorizontalAlignment="Left" Margin="59,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="GameNameTB" HorizontalAlignment="Left" Margin="59,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="GameDescTB" HorizontalAlignment="Left" Margin="92,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Height="28" UndoLimit="250"/>
         <ComboBox x:Name="GamePlateformCB" HorizontalAlignment="Left" Margin="83,164,0,0" VerticalAlignment="Top" Width="96" Height="14" RenderTransformOrigin="0.481,1.138"/>
         <ComboBox x:Name="GameGenderCB" HorizontalAlignment="Left" Margin="586,97,0,0" VerticalAlignment="Top" Width="96" Height="13"/>
