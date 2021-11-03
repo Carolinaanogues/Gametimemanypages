@@ -15,7 +15,7 @@ namespace manypages
 
         private void MyWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            frame.NavigationService.Navigate(new Home());
+            frame.NavigationService.Navigate(new Login());
         }
     }
 }
