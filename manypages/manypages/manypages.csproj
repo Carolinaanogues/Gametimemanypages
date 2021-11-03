@@ -31,17 +31,7 @@
 
   <ItemGroup>
     <Resource Include="assets\UI\543fc7c85e3bcb0730e6c3264e9b4458.png" />
-    <Resource Include="assets\UI\award.png" />
-    <Resource Include="assets\UI\gold-medal.png" />
-    <Resource Include="assets\UI\hidden.png" />
     <Resource Include="assets\UI\login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
-    <Resource Include="assets\UI\medal (1).png" />
-    <Resource Include="assets\UI\medal.png" />
-    <Resource Include="assets\UI\sports-trophy.png" />
-    <Resource Include="assets\UI\star (1).png" />
-    <Resource Include="assets\UI\star (2).png" />
-    <Resource Include="assets\UI\star (3).png" />
-    <Resource Include="assets\UI\trophy.png" />
     <Resource Include="assets\UI\user.png" />
   </ItemGroup>
 
