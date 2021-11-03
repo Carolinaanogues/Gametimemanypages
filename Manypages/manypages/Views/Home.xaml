@@ -48,14 +48,6 @@
                     ImageSource="/assets/UI/login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
             </Button.Background>
         </Button>
-        <Button x:Name="btn_Createacc" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="38,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.287,0.047" Width="32" Height="29" Click="btn_Createacc_Click">
-            <Button.BorderBrush>
-                <ImageBrush/>
-            </Button.BorderBrush>
-            <Button.Background>
-                <ImageBrush ImageSource="/assets/UI/user.png"/>
-            </Button.Background>
-        </Button>
 
     </Grid>
 </Page>

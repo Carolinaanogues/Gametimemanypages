@@ -32,11 +32,6 @@ namespace manypages
             NavigationService?.Navigate(new Historique());
         }
 
-        private void btn_Createacc_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Createaccount());
-        }
-
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Home());
