@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using manypages.Models;
+using manypages.ObjectStructure.Enums;
 
 namespace manypages
 {
@@ -7,8 +10,14 @@ namespace manypages
     /// </summary>
     public partial class Historique
     {
+        public ModelJeux IModelJeux { get; set; }
+        public ModelHistorique IModelHistorique { get; set; }
         public Historique()
         {
+            DataContext = this;
+            IModelJeux = new ModelJeux();
+            IModelJeux.Add("test1", "asdf", new []{"", ""}, DateTime.Now, Genre.FPS, PEGI.PEGI3, Plateforme.Switch, VersionPays.PAL);
+            IModelHistorique = new ModelHistorique();
             InitializeComponent();
         }
 

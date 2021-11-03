@@ -17,11 +17,6 @@ namespace manypages
             NavigationService?.Navigate(new Bibliotheque());
         }
 
-        private void btn_Home_Copy2_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Profile());
-        }
-
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Login());
@@ -34,7 +29,7 @@ namespace manypages
 
         private void btn_Createacc_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Createaccount());
+            NavigationService?.Navigate(new Profile());
         }
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
