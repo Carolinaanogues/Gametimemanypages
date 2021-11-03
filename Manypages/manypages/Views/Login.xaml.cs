@@ -24,8 +24,8 @@ namespace manypages
             Profiles = mp;
             Jeux = mj;
             Historique = mh;
-            InitializeComponent();
             Profiles.Add("admin", "admin", "admin", DateTime.Now, "a@a.com", "admin");
+            InitializeComponent();
         }
 
         #endregion
