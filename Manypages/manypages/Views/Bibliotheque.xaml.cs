@@ -4,6 +4,7 @@ using manypages.Models;
 using manypages.ObjectStructure.Objects;
 using manypages.ObjectStructure.Enums;
 using System.Linq;
+using System.Windows.Controls;
 
 namespace manypages
 {
@@ -55,17 +56,24 @@ namespace manypages
 
         private void AddGameBtn_Click(object sender, RoutedEventArgs e)
         {
-            IModelJeux.Add(
-                GameNameTB.Text,
-                GameDescTB.Text,
-                new[] { "", "" },
-                ReleaseDateDP.SelectedDate.Value,
-                (Genre)GameGenderCB.SelectedItem,
-                (PEGI)GamePEGICB.SelectedItem,
-                (Plateforme)GamePlateformCB.SelectedItem,
-                (VersionPays)GameVersionCB.SelectedItem
-            );
-            ResetFieldValue();
+            try
+            {
+                IModelJeux.Add(
+                                GameNameTB.Text,
+                                GameDescTB.Text,
+                                new[] { "", "" },
+                                ReleaseDateDP.SelectedDate.Value,
+                                (Genre)GameGenderCB.SelectedItem,
+                                (PEGI)GamePEGICB.SelectedItem,
+                                (Plateforme)GamePlateformCB.SelectedItem,
+                                (VersionPays)GameVersionCB.SelectedItem
+                               );
+                ResetFieldValue();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veuillez remplir les champs\n{ex.Message}", "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
 
@@ -80,6 +88,21 @@ namespace manypages
         private void ResetFieldBtn_Click(object sender, RoutedEventArgs e)
         {
             ResetFieldValue();
+        }
+
+        private void listView_Click(object sender, RoutedEventArgs e)
+        {
+            var item = GameLibraryLV.SelectedItem;
+            if (item != null)
+            {
+                GameNameTB.Text = "";
+                GameDescTB.Text = "";
+                ReleaseDateDP.SelectedDate = null;
+                GameGenderCB.SelectedItem = null;
+                GamePEGICB.SelectedItem = null;
+                GamePlateformCB.SelectedItem = null;
+                GameVersionCB.SelectedItem = null;
+            }
         }
 
         private void ResetFieldValue()

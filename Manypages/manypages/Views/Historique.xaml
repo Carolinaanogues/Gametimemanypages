@@ -38,7 +38,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Label Content="Jeux" HorizontalAlignment="Left" Margin="19,62,0,0" VerticalAlignment="Top" />
+        <Label Content="Jeux" HorizontalAlignment="Left" Margin="19,58,0,0" VerticalAlignment="Top" />
         <ListView Margin="0,104,0,0" ItemsSource="{Binding IModelHistorique.Display}" Name="ListViewHistorique">
             <ListView.View>
                 <GridView>
