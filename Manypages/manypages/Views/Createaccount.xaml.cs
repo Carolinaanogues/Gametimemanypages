@@ -48,7 +48,7 @@ namespace manypages
                 return;
             }
 
-            lblErr2.Content = "Le pseudo existe déjà.";
+            lblErr1.Content = "Le pseudo existe déjà.";
 
 
         }
