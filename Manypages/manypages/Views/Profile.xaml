@@ -42,7 +42,7 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="362,126,0,0" VerticalAlignment="Top" Width="149"
+        <Label Content="" HorizontalAlignment="Left" Margin="362,126,0,0" VerticalAlignment="Top" Width="149"
                BorderBrush="White" />
         <Label HorizontalAlignment="Left" Margin="274,123,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16">
             <Label Content="Pseudo :" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"
@@ -52,13 +52,13 @@
                FontWeight="Bold" FontSize="16" />
         <Button x:Name="btn_putimg" Content="Chercher une image..." HorizontalAlignment="Left" Margin="28,217,0,0" VerticalAlignment="Top"
                 BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="143" Click="Button_Click" />
-        <Label Content="Label" HorizontalAlignment="Left" Margin="400,176,0,0" VerticalAlignment="Top" Width="149"
+        <Label Content="" HorizontalAlignment="Left" Margin="400,176,0,0" VerticalAlignment="Top" Width="149"
                BorderBrush="White" />
-        <Rectangle x:Name="PseudoValueLbl" HorizontalAlignment="Left" Height="31" Margin="362,123,0,0" Stroke="Black" VerticalAlignment="Top"
+        <Rectangle x:Name="PseudoValueLbl" HorizontalAlignment="Left" Height="31" Margin="363,123,0,0" Stroke="Black" VerticalAlignment="Top"
                    Width="149" />
-        <Rectangle x:Name="PasswordValueLbl" HorizontalAlignment="Left" Height="31" Margin="398,171,0,0" Stroke="Black" VerticalAlignment="Top"
+        <Rectangle x:Name="PasswordValueLbl" HorizontalAlignment="Left" Height="30" Margin="398,173,0,0" Stroke="Black" VerticalAlignment="Top"
                    Width="149" />
-        <Label x:Name="NameValueLbl" Content="Label" HorizontalAlignment="Left" Margin="89,281,0,0" VerticalAlignment="Top" Width="228" />
+        <Label x:Name="NameValueLbl" Content="" HorizontalAlignment="Left" Margin="89,281,0,0" VerticalAlignment="Top" Width="228" />
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="25,276,0,0" VerticalAlignment="Top" FontWeight="Bold"
                FontSize="16" />
         <Label Content="Prénom :" HorizontalAlignment="Left" Margin="26,316,0,0" VerticalAlignment="Top"
@@ -67,7 +67,7 @@
                FontWeight="Bold" FontSize="16" />
         <Label Content="Email :" HorizontalAlignment="Left" Margin="28,391,0,0" VerticalAlignment="Top"
                FontWeight="Bold" FontSize="16" />
-        <Label x:Name="FirstNameValueLbl" Content="Label" HorizontalAlignment="Left" Margin="109,322,0,0" VerticalAlignment="Top" Width="228" />
+        <Label x:Name="FirstNameValueLbl" Content="" HorizontalAlignment="Left" Margin="109,322,0,0" VerticalAlignment="Top" Width="228" />
         <Label HorizontalAlignment="Center" Margin="0,355,0,0" VerticalAlignment="Top" Width="228" >
             <DatePicker/>
         </Label>
@@ -81,7 +81,7 @@
         <Rectangle HorizontalAlignment="Left" Height="106" Margin="21,106,0,0" Stroke="Black" VerticalAlignment="Top" Width="161" StrokeThickness="2"/>
         <Image x:Name="imgdisplay" HorizontalAlignment="Left" Height="100" Margin="26,106,0,0" VerticalAlignment="Top" Width="158"/>
         <Label x:Name="labelimg" Content="Label" HorizontalAlignment="Left" Margin="30,242,0,0" VerticalAlignment="Top" Width="425"/>
-        <Label x:Name="EmailValueLbl" Content="Label" HorizontalAlignment="Left" Margin="94,397,0,0" VerticalAlignment="Top" Width="228" />
+        <Label x:Name="EmailValueLbl" Content="" HorizontalAlignment="Left" Margin="94,397,0,0" VerticalAlignment="Top" Width="228" />
         <Label Content="Profil" HorizontalAlignment="Left" Margin="17,30,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30"/>
 
     </Grid>
