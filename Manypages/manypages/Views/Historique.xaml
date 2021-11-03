@@ -31,14 +31,14 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <ComboBox HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="120" Height="19" />
-        <ComboBox HorizontalAlignment="Left" Margin="154,80,0,0" VerticalAlignment="Top" Width="120" Height="18" />
-        <ComboBox HorizontalAlignment="Left" Margin="289,80,0,0" VerticalAlignment="Top" Width="120" Height="18" />
-        <ComboBox HorizontalAlignment="Left" Margin="424,80,0,0" VerticalAlignment="Top" Width="120" Height="18" />
+        <ComboBox HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="120" Height="19" ItemsSource="{Binding IModelJeux.Vgs}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Nom}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
         <Label Content="Jeux" HorizontalAlignment="Left" Margin="19,62,0,0" VerticalAlignment="Top" />
-        <Label Content="Platforme" HorizontalAlignment="Left" Margin="155,62,0,0" VerticalAlignment="Top" />
-        <Label Content="Genre" HorizontalAlignment="Left" Margin="289,62,0,0" VerticalAlignment="Top" />
-        <Label Content="Status" HorizontalAlignment="Left" Margin="424,62,0,0" VerticalAlignment="Top" />
         <ListView Margin="0,104,0,0">
             <ListView.View>
                 <GridView>
