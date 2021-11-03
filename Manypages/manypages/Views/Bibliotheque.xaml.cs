@@ -3,6 +3,8 @@ using System.Windows.Media.Imaging;
 using System;
 using System.Windows;
 using Microsoft.Win32;
+using manypages.Models;
+using manypages.ObjectStructure.Objects;
 
 namespace manypages
 {

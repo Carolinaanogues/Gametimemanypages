@@ -49,7 +49,7 @@
         <Button x:Name="FinishBtn" Content="Finis" HorizontalAlignment="Left" Margin="507,42,0,0" VerticalAlignment="Top"
                 Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="53" />
         <Button x:Name="AddGameBtn" Content="Ajouter jeux" HorizontalAlignment="Left" Margin="370,42,0,0" VerticalAlignment="Top"
-                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="76" />
+                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="76" Click="AddGameBtn_Click" />
         <Button x:Name="InProgressBtn" Content="En cours" HorizontalAlignment="Left" Margin="451,42,0,0" VerticalAlignment="Top"
                 Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="54" />
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"

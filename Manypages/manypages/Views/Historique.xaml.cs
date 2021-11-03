@@ -2,6 +2,7 @@
 using System.Windows;
 using manypages.Models;
 using manypages.ObjectStructure.Enums;
+using manypages.ObjectStructure.Objects;
 
 namespace manypages
 {
@@ -42,6 +43,11 @@ namespace manypages
         private void btn_Historique_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
+        }
+
+        private void AddGameBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,7 @@
     <Grid >
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" />
-        <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
+        <Button x:Name="btn_Biblio" Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Biblio_Click" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0" Click="btn_Historique_Click" />
@@ -21,7 +21,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" FontWeight="Bold" FontSize="30" Margin="8,15,0,0"/>
+        <Label Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" FontWeight="Bold" FontSize="30" Margin="8,15,0,0"/>
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="11,66,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Description :" HorizontalAlignment="Left" Margin="8,101,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Date :" HorizontalAlignment="Left" Margin="11,131,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
@@ -44,14 +44,15 @@
         <Button x:Name="RemoveGameBtn" Content="Retirer" HorizontalAlignment="Left" Margin="318,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="43"/>
         <Button x:Name="EditGameBtn" Content="Editer" HorizontalAlignment="Left" Margin="366,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="44"/>
         <Button x:Name="ResetFieldBtn" Content="Reset " HorizontalAlignment="Left" Margin="415,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="46"/>
-        <TextBox x:Name="GameNameTB" HorizontalAlignment="Left" Margin="59,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="GameNameTB" HorizontalAlignment="Left" Margin="59,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="GameDescTB" HorizontalAlignment="Left" Margin="92,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Height="28" UndoLimit="250"/>
-        <ComboBox x:Name="GamePlateformCB" HorizontalAlignment="Left" Margin="83,164,0,0" VerticalAlignment="Top" Width="96" Height="14" RenderTransformOrigin="0.481,1.138"/>
+        <ComboBox x:Name="GamePlateformCB" HorizontalAlignment="Left" Margin="83,164,0,0" VerticalAlignment="Top" Width="96" Height="14" RenderTransformOrigin="0.481,1.138">
+        </ComboBox>
         <ComboBox x:Name="GameGenderCB" HorizontalAlignment="Left" Margin="586,97,0,0" VerticalAlignment="Top" Width="96" Height="13"/>
         <ComboBox x:Name="GamePEGICB" HorizontalAlignment="Left" Margin="586,120,0,0" VerticalAlignment="Top" Width="96" Height="13"/>
         <ComboBox x:Name="GameVersionCB" HorizontalAlignment="Left" Margin="586,144,0,0" VerticalAlignment="Top" Width="96" Height="13"/>
         <DatePicker x:Name="ReleaseDateDP" HorizontalAlignment="Left" Margin="59,133,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_putimg" Content="Chercher une image..." HorizontalAlignment="Left" Margin="586,69,0,0" VerticalAlignment="Top"
-            BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="113" Click="Button_Click" Height="18" />
+            BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="113" Height="18" />
     </Grid>
 </Page>
