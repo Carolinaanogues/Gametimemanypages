@@ -32,7 +32,7 @@ namespace manypages
                 || CheckEmpty(txtName.Text) || CheckEmpty(txtFirstName.Text)
                 || CheckEmpty(dpBirthDate.Text) || CheckEmpty(txtEmail.Text))
             {
-                lblErr1.Content = "Veuillez remplir tous les chmaps !";
+                lblErr1.Content = "Veuillez remplir tous les champs !";
                 return;
             }
 
@@ -44,6 +44,7 @@ namespace manypages
             {
                 //Profil NewProfile = new Profil(txtNickname.Text, txtName.Text, txtFirstName.Text, DateTime.Parse(dpBirthDate.Text), txtEmail.Text, pwdPassword.Password);
                 Profiles.Add(txtNickname.Text, txtName.Text, txtFirstName.Text, DateTime.Parse(dpBirthDate.Text), txtEmail.Text, pwdPassword.Password);
+                NavigationService?.Navigate(new Login(Profiles, Jeux, Historique));
                 return;
             }
 
@@ -52,7 +53,7 @@ namespace manypages
 
         }
 
-        public bool CheckEmpty(string txt)
+        private bool CheckEmpty(string txt)
         {
             return string.IsNullOrEmpty(txt);
         }

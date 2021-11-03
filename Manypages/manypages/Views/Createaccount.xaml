@@ -20,7 +20,7 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <Button Content="Créer " HorizontalAlignment="Left" Margin="686,398,0,0" VerticalAlignment="Top" Background="#FF46ACE0" Foreground="White" Width="72" FontSize="16"/>
+        <Button Content="Créer " HorizontalAlignment="Left" Margin="686,398,0,0" VerticalAlignment="Top" Background="#FF46ACE0" Foreground="White" Width="72" FontSize="16" Click="CreateAccount"/>
         <Label Content="Pseudo :" HorizontalAlignment="Left" Margin="335,136,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
         <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="335,184,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
         <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Margin="436,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
