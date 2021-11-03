@@ -29,7 +29,7 @@
                    Width="510" Grid.RowSpan="2" />
         <Image HorizontalAlignment="Left" Height="34" Margin="681,214,0,0" VerticalAlignment="Top" Width="43"
                Grid.ColumnSpan="2" Grid.Row="1" />
-        <Button x:Name="btn_Biblio" Content="Bibliothéque" HorizontalAlignment="Left" VerticalAlignment="Top"
+        <Button x:Name="btn_Biblio" Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="141" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="156,220,0,0"
                 Click="btn_Home_Copy_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
