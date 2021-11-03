@@ -1,4 +1,5 @@
 ﻿using manypages.Models;
+using System;
 
 namespace manypages
 {
@@ -22,5 +23,40 @@ namespace manypages
         {
             NavigationService?.Navigate(new Login(Profiles, Jeux, Historique));
         }
+
+        #region CreateProfile
+
+        private void CreateAccount(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (CheckEmpty(txtNickname.Text) || CheckEmpty(pwdPassword.Password)
+                || CheckEmpty(txtName.Text) || CheckEmpty(txtFirstName.Text)
+                || CheckEmpty(dpBirthDate.Text) || CheckEmpty(txtEmail.Text))
+            {
+                lblErr1.Content = "Veuillez remplir tous les chmaps !";
+                return;
+            }
+
+            try
+            {
+                Profiles.GetByUsername(txtNickname.Text);
+            }
+            catch (InvalidOperationException)
+            {
+                //Profil NewProfile = new Profil(txtNickname.Text, txtName.Text, txtFirstName.Text, DateTime.Parse(dpBirthDate.Text), txtEmail.Text, pwdPassword.Password);
+                Profiles.Add(txtNickname.Text, txtName.Text, txtFirstName.Text, DateTime.Parse(dpBirthDate.Text), txtEmail.Text, pwdPassword.Password);
+                return;
+            }
+
+            lblErr2.Content = "Le pseudo existe déjà.";
+
+
+        }
+
+        public bool CheckEmpty(string txt)
+        {
+            return string.IsNullOrEmpty(txt);
+        }
+
+        #endregion
     }
 }
