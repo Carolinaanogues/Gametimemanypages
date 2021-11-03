@@ -15,15 +15,6 @@ namespace manypages
 
         #endregion
 
-        #region Navigation
-
-        private void btn_Home_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Home());
-        }
-
-        #endregion
-
         #region Constructor
 
         public Login()

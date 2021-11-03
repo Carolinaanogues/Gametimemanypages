@@ -6,10 +6,8 @@
       mc:Ignorable="d"
       Title="Login" Height="373" Width="472">
     <Grid>
-        <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" />
-        <Image HorizontalAlignment="Center" Height="91" Margin="0,43,0,0" VerticalAlignment="Top" Width="88"
-               Source="/assets/UI/user.png" />
+           <Image HorizontalAlignment="Center" Height="91" Margin="0,43,0,0" VerticalAlignment="Top" Width="88"
+                  Source="/assets/UI/user.png" />
         <Ellipse HorizontalAlignment="Center" Height="100" Margin="0,31,0,0" Stroke="Black" VerticalAlignment="Top"
                  Width="100" />
         <Label Content="Login" HorizontalAlignment="Center" Margin="0,147,0,0" VerticalAlignment="Top"
