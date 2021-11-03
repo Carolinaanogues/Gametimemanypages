@@ -38,27 +38,17 @@
         <Rectangle HorizontalAlignment="Center" Height="20" Margin="0,209,0,0" Stroke="Black" VerticalAlignment="Top"
                    Width="159" />
         <PasswordBox HorizontalAlignment="Center" Margin="0,259,0,0" VerticalAlignment="Top" Width="159" Height="20"
-                     BorderBrush="Black" />
+                     BorderBrush="Black" Name="psswrdTxt"/>
         <Label Content="T'as pas de compte ?" HorizontalAlignment="Left" Margin="134,298,0,0" VerticalAlignment="Top"
                FontSize="9" />
-        <Button Content="Crée une ici !" HorizontalAlignment="Left" Margin="241,303,0,0" VerticalAlignment="Top"
-                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="70" FontSize="8" />
-        <Label Content="Mot de passe oublié ?" HorizontalAlignment="Left" Margin="134,325,0,0" VerticalAlignment="Top"
-               FontSize="9" />
-        <Button Content="Clique ici !" HorizontalAlignment="Left" Margin="241,329,0,0" VerticalAlignment="Top"
-                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="70" FontSize="8" />
+        <Button Content="Crée en un ici !" HorizontalAlignment="Left" Margin="241,303,0,0" VerticalAlignment="Top"
+                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="70" FontSize="8" Click="GoToCreateAccount"/>
         <Button Content="Entrer" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top"
-                Background="#FF0A0863" Foreground="White" BorderBrush="#FF0A0863" Height="20" Width="38" FontSize="10" />
-        <Button Content="" HorizontalAlignment="Left" Margin="292,262,0,0" VerticalAlignment="Top" Height="15"
-                Width="19" BorderBrush="White">
-            <Button.Background>
-                <ImageBrush ImageSource="/assets/UI/hidden.png" />
-            </Button.Background>
-        </Button>
+                Background="#FF0A0863" Foreground="White" BorderBrush="#FF0A0863" Height="20" Width="38" FontSize="10" Click="LogToApp"/>
         <TextBox HorizontalAlignment="Center" Margin="0,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top"
-                 Width="159" />
-        <Label Content="Label d'erreur" HorizontalAlignment="Left" Margin="106,229,0,0" VerticalAlignment="Top"
-               Height="31" Width="252" />
+                 Width="159" Name="usrTxt"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="106,229,0,0" VerticalAlignment="Top"
+               Height="31" Width="252" Name="ErrorLabel" Foreground="Red"/>
 
     </Grid>
 </Page>

@@ -5,11 +5,11 @@ using manypages.ObjectStructure.Objects;
 
 namespace manypages.Models
 {
-    public class LogicProfiles
+    public class ModelProfiles
     {
         #region Properties
 
-        public static ObservableCollection<Profil> Profiles { get; set; } = new ObservableCollection<Profil>();
+        public ObservableCollection<Profil> Profiles { get; set; } = new ObservableCollection<Profil>();
 
         #endregion
 
@@ -20,14 +20,21 @@ namespace manypages.Models
         /// </summary>
         /// <param name="index">index where the object is in the list</param>
         /// <returns>user found</returns>
-        public static Profil GetByIndex(int index) => Profiles[index];
+        public Profil GetByIndex(int index) => Profiles[index];
 
         /// <summary>
         /// Get a user by its Guid
         /// </summary>
         /// <param name="id">the guid to search</param>
         /// <returns>user found</returns>
-        public static Profil GetByGuid(Guid id) => Profiles.First(u => u.Id == id);
+        public Profil GetByGuid(Guid id) => Profiles.First(u => u.Id == id);
+        
+        /// <summary>
+        /// Get a user by its username
+        /// </summary>
+        /// <param name="username">the username to search</param>
+        /// <returns>a profile object</returns>
+        public Profil GetByUsername(string username) => Profiles.First(u => u.Pseudo == username);
 
         /// <summary>
         /// Add a new user in the ObservableCollection
@@ -38,7 +45,7 @@ namespace manypages.Models
         /// <param name="birthdate">user's birthdate</param>
         /// <param name="email">user's email</param>
         /// <param name="mdp">user's password</param>
-        public static void Add(string pseudo, string nom, string prenom, DateTime birthdate, string email,
+        public void Add(string pseudo, string nom, string prenom, DateTime birthdate, string email,
             string mdp) =>
             Profiles.Add(new Profil(pseudo, nom, prenom, birthdate, email, mdp));
 
@@ -52,7 +59,7 @@ namespace manypages.Models
         /// <param name="birthdate">new birthdate</param>
         /// <param name="email">new email</param>
         /// <param name="mdp">new password</param>
-        public static void Update(int index, string pseudo, string nom, string prenom, DateTime birthdate, string email,
+        public void Update(int index, string pseudo, string nom, string prenom, DateTime birthdate, string email,
             string mdp)
         {
             if (index < 0)
@@ -70,13 +77,13 @@ namespace manypages.Models
         /// Delete a user based on its index in the ObservableCollection
         /// </summary>
         /// <param name="index">where the user is</param>
-        public static void Delete(int index) => Profiles.RemoveAt(index);
+        public void Delete(int index) => Profiles.RemoveAt(index);
 
         /// <summary>
         /// Set a user to its default value based on its index
         /// </summary>
         /// <param name="index">where the user is</param>
-        public static void Reset(int index)
+        public void Reset(int index)
         {
             Profiles[index].Nom = "";
             Profiles[index].Pseudo = "";
@@ -84,6 +91,22 @@ namespace manypages.Models
             Profiles[index].BirthDate = DateTime.Now;
             Profiles[index].Email = "";
             Profiles[index].MotDePasse = "";
+        }
+        
+        public bool UserLogin(string username, string password)
+        {
+            try
+            {
+                Profil profile = GetByUsername(username);
+                if (profile.MotDePasse != password)
+                    throw new InvalidOperationException("invalid password");
+            }
+            catch (InvalidOperationException)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         #endregion
