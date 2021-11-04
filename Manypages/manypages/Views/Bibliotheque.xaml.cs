@@ -5,6 +5,7 @@ using manypages.ObjectStructure.Objects;
 using manypages.ObjectStructure.Enums;
 using System.Linq;
 using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace manypages
 {
@@ -17,6 +18,8 @@ namespace manypages
         public Profil Profile { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
+
+        private int _selectedItemIndex = 0;
 
         public Bibliotheque(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
@@ -72,17 +75,38 @@ namespace manypages
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Veuillez remplir les champs\n{ex.Message}", "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show($"Veuillez remplir tout les champs\n{ex.Message}", "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-        }
-
-
-        private void RemoveGameBtn_Click(object sender, RoutedEventArgs e)
-        {
         }
 
         private void EditGameBtn_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                IModelJeux.Update(
+                                _selectedItemIndex,
+                                GameNameTB.Text,
+                                GameDescTB.Text,
+                                new[] { "", "" },
+                                ReleaseDateDP.SelectedDate.Value,
+                                (Genre)GameGenderCB.SelectedItem,
+                                (PEGI)GamePEGICB.SelectedItem,
+                                (Plateforme)GamePlateformCB.SelectedItem,
+                                (VersionPays)GameVersionCB.SelectedItem
+                               );
+                CollectionViewSource.GetDefaultView(IModelJeux.Vgs).Refresh();
+                ResetFieldValue();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veuillez remplir tout les champs\n{ex.Message}", "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void RemoveGameBtn_Click(object sender, RoutedEventArgs e)
+        {
+            IModelJeux.Delete(_selectedItemIndex);
+            ResetFieldValue();
         }
 
         private void ResetFieldBtn_Click(object sender, RoutedEventArgs e)
@@ -92,18 +116,20 @@ namespace manypages
 
         private void listView_Click(object sender, RoutedEventArgs e)
         {
-            var item = GameLibraryLV.SelectedItem;
+            Jeuxvideo selectedItem = (Jeuxvideo)GameLibraryLV.SelectedItem;
+            _selectedItemIndex = GameLibraryLV.SelectedIndex;
 
-            if (item == null)
+            if (selectedItem == null)
                 return;
-
-            GameNameTB.Text = "";
-            GameDescTB.Text = "";
-            ReleaseDateDP.SelectedDate = null;
-            GameGenderCB.SelectedItem = null;
-            GamePEGICB.SelectedItem = null;
-            GamePlateformCB.SelectedItem = null;
-            GameVersionCB.SelectedItem = null;
+            
+            GameNameTB.Text = selectedItem.Nom;
+            GameDescTB.Text = selectedItem.Description;
+            ReleaseDateDP.SelectedDate = selectedItem.Date;
+            GameGenderCB.SelectedItem = selectedItem.Genre;
+            GamePEGICB.SelectedItem = selectedItem.Pegi;
+            GamePlateformCB.SelectedItem = selectedItem.Plateforme;
+            GameVersionCB.SelectedItem = selectedItem.Version;
+            
         }
 
         private void ResetFieldValue()
@@ -115,16 +141,6 @@ namespace manypages
             GamePEGICB.SelectedItem = null;
             GamePlateformCB.SelectedItem = null;
             GameVersionCB.SelectedItem = null;
-        }
-
-        private void GameDescTB_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void GameLibraryLV_PreviewMouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-
         }
     }
 }
