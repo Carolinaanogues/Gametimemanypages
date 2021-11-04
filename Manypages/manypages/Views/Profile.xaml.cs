@@ -17,11 +17,6 @@ namespace manypages
     /// </summary>
     public partial class Profile
     {
-        private Profil profile;
-        private ModelProfiles profiles;
-        private ModelJeux modelJeux;
-        private ModelHistorique modelHistorique;
-
         public Profil IProfile { get; set; }
         public ModelProfiles Profiles { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
@@ -99,7 +94,7 @@ namespace manypages
                 datepicker.SelectedDate.Value,
                 txtemail.Text,
                 txtpasswd.Text
-                );
+            );
             datepicker.IsEnabled = false;
             txtemail.IsReadOnly = true;
             txtnom.IsReadOnly = true;
@@ -109,16 +104,18 @@ namespace manypages
             update.IsEnabled = true;
             btn_putimg.IsEnabled = false;
             update.IsEnabled = false;
-
         }
 
         private void SupDataBtn_Click(object sender, RoutedEventArgs e)
         {
             int index = Profiles.GetIndex(IProfile);
             Profiles.Delete(index);
-
             NavigationService?.Navigate(new Login(Profiles, IModelJeux, IModelHistorique));
+        }
 
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO implémenter la fonction reset qui reprend les valeurs de la personne connectée et écrase les textbox
         }
     }
 }

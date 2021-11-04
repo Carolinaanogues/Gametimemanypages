@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using manypages.ObjectStructure.Enums;
 using manypages.ObjectStructure.Objects;
 
 namespace manypages.Models
@@ -21,11 +19,6 @@ namespace manypages.Models
         #endregion
 
         #region Methods
-
-        private bool UseFilter(object item)
-        {
-            return (item as Tuple<Jeuxvideo, Status>).Item1.Id == ConnectedProfile.Id;
-        }
 
         /// <summary>
         /// Add a new game to the user's history

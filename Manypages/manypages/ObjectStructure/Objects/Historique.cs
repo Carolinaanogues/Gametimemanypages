@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using manypages.ObjectStructure.Enums;
 
 namespace manypages.ObjectStructure.Objects

@@ -7,8 +7,8 @@
       Title="Home" Height="450" Width="800">
     <Grid Margin="0,0,0,-6">
         <Grid.RowDefinitions>
-            <RowDefinition Height="47*"/>
-            <RowDefinition Height="181*"/>
+            <RowDefinition Height="47*" />
+            <RowDefinition Height="181*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="143*" />
@@ -45,12 +45,14 @@
                     ImageSource="/assets/UI/login-arrow-symbol-entering-back-into-a-square_icon-icons.com_73221.png" />
             </Button.Background>
         </Button>
-        <Button x:Name="btn_Createacc" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="38,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.287,0.047" Width="32" Height="29" Click="btn_Createacc_Click">
+        <Button x:Name="btn_Createacc" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="38,0,0,0"
+                VerticalAlignment="Center" RenderTransformOrigin="0.287,0.047" Width="32" Height="29"
+                Click="btn_Createacc_Click">
             <Button.BorderBrush>
-                <ImageBrush/>
+                <ImageBrush />
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush ImageSource="/assets/UI/user.png"/>
+                <ImageBrush ImageSource="/assets/UI/user.png" />
             </Button.Background>
         </Button>
 

@@ -21,20 +21,6 @@ namespace manypages.Models
         }
 
         /// <summary>
-        /// Get a user by its index in the ObservableCollection
-        /// </summary>
-        /// <param name="index">index where the object is in the list</param>
-        /// <returns>user found</returns>
-        public Profil GetByIndex(int index) => Profiles[index];
-
-        /// <summary>
-        /// Get a user by its Guid
-        /// </summary>
-        /// <param name="id">the guid to search</param>
-        /// <returns>user found</returns>
-        public Profil GetByGuid(Guid id) => Profiles.First(u => u.Id == id);
-
-        /// <summary>
         /// Get a user by its username
         /// </summary>
         /// <param name="username">the username to search</param>
@@ -83,20 +69,6 @@ namespace manypages.Models
         /// </summary>
         /// <param name="index">where the user is</param>
         public void Delete(int index) => Profiles.RemoveAt(index);
-
-        /// <summary>
-        /// Set a user to its default value based on its index
-        /// </summary>
-        /// <param name="index">where the user is</param>
-        public void Reset(int index)
-        {
-            Profiles[index].Nom = "";
-            Profiles[index].Pseudo = "";
-            Profiles[index].Prenom = "";
-            Profiles[index].BirthDate = DateTime.Now;
-            Profiles[index].Email = "";
-            Profiles[index].MotDePasse = "";
-        }
 
         public bool UserLogin(string username, string password)
         {
