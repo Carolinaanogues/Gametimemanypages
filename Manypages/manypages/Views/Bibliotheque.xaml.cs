@@ -15,13 +15,16 @@ namespace manypages
     /// </summary>
     public partial class Bibliotheque
     {
+        #region Propriété
         public ModelProfiles Profiles { get; set; }
         public Profil Profile { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
 
         private int _selectedItemIndex = 0;
+        #endregion
 
+        #region Methodes
         /// <summary>
         /// Constructeur
         /// </summary>
@@ -76,7 +79,7 @@ namespace manypages
         }
 
         /// <summary>
-        /// 
+        /// Page de Profile du compte
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -85,6 +88,11 @@ namespace manypages
             NavigationService?.Navigate(new Profile(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
+        /// <summary>
+        /// Bouton ajouter un jeu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddGameBtn_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -107,6 +115,11 @@ namespace manypages
             }
         }
 
+        /// <summary>
+        /// Bouton editer un joueur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditGameBtn_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -131,6 +144,11 @@ namespace manypages
             }
         }
 
+        /// <summary>
+        /// Bouton retirer un jeu de la bibliothèque
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RemoveGameBtn_Click(object sender, RoutedEventArgs e)
         {
             Jeuxvideo vg = IModelJeux.GetByIndex(_selectedItemIndex);
@@ -146,11 +164,22 @@ namespace manypages
             ResetFieldValue();
         }
 
+        /// <summary>
+        /// Réinitialiser les champs de la page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ResetFieldBtn_Click(object sender, RoutedEventArgs e)
         {
+           
             ResetFieldValue();
         }
 
+        /// <summary>
+        /// Détection de click dans la liste et remplissage des champs avec les valeurs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listView_Click(object sender, RoutedEventArgs e)
         {
             Jeuxvideo selectedItem = (Jeuxvideo)GameLibraryLV.SelectedItem;
@@ -169,6 +198,9 @@ namespace manypages
             
         }
 
+        /// <summary>
+        /// Réinisialisation des valeurs de champs
+        /// </summary>
         private void ResetFieldValue()
         {
             GameNameTB.Text = "";
@@ -179,5 +211,6 @@ namespace manypages
             GamePlateformCB.SelectedItem = null;
             GameVersionCB.SelectedItem = null;
         }
+        #endregion
     }
 }
