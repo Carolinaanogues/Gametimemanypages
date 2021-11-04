@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Data;
 using manypages.Models;
 using manypages.ObjectStructure.Enums;
 using manypages.ObjectStructure.Objects;
@@ -66,13 +67,13 @@ namespace manypages
         private void SetFinished(object sender, RoutedEventArgs e)
         {
             UpdateStatus((ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem, Status.Finished);
-            btn_Historique_Click(sender, e);
+            CollectionViewSource.GetDefaultView(IModelHistorique.Display).Refresh();
         }
 
         private void SetInProgress(object sender, RoutedEventArgs e)
         {
             UpdateStatus((ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem, Status.InProgress);
-            btn_Historique_Click(sender, e);
+            CollectionViewSource.GetDefaultView(IModelHistorique.Display).Refresh();
         }
 
         private void UpdateStatus(ObjectStructure.Objects.Historique hist, Status status)
