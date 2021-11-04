@@ -7,6 +7,8 @@ using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Collections.Generic;
+using System.Windows.Media.Imaging;
+using Microsoft.Win32;
 
 namespace manypages
 {
@@ -239,6 +241,26 @@ namespace manypages
             GamePEGICB.SelectedItem = null;
             GamePlateformCB.SelectedItem = null;
             GameVersionCB.SelectedItem = null;
+        }
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png"
+            };
+            if (openFileDialog.ShowDialog() != true) return;
+
+
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri(openFileDialog.FileName);
+            bitmapImage.EndInit();
+            Image img = new Image
+            {
+                Source = bitmapImage
+            };
+            imageJeux.Source = img.Source;
         }
         #endregion
     }

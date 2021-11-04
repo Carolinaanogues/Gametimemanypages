@@ -65,9 +65,11 @@ namespace manypages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png"
+            };
             if (openFileDialog.ShowDialog() != true) return;
-            openFileDialog.Filter = "Image files (*.png)|(*.jpg)";
 
 
             BitmapImage bitmapImage = new BitmapImage();
