@@ -13,6 +13,7 @@ namespace manypages
         public ModelProfiles Profiles { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
+
         public Home(Profil profile)
         {
             InitializeComponent();

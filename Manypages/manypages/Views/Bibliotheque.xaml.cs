@@ -1,12 +1,10 @@
-﻿using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-using System;
+﻿using System;
 using System.Windows;
-using Microsoft.Win32;
 using manypages.Models;
 using manypages.ObjectStructure.Objects;
 using manypages.ObjectStructure.Enums;
 using System.Linq;
+using System.Windows.Controls;
 
 namespace manypages
 {
@@ -19,6 +17,7 @@ namespace manypages
         public Profil Profile { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
+
         public Bibliotheque(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
             Profiles = mp;
@@ -26,7 +25,7 @@ namespace manypages
             IModelJeux = mj;
             IModelHistorique = mh;
             DataContext = this;
-            
+
             InitializeComponent();
 
             GamePlateformCB.ItemsSource = Enum.GetValues(typeof(Plateforme)).Cast<Plateforme>();
@@ -57,32 +56,53 @@ namespace manypages
 
         private void AddGameBtn_Click(object sender, RoutedEventArgs e)
         {
-            IModelJeux.Add(
-                             GameNameTB.Text,
-                             GameDescTB.Text,
-                             new[] { "", "" },
-                             ReleaseDateDP.SelectedDate.Value,
-                             (Genre)GameGenderCB.SelectedItem,
-                             (PEGI)GamePEGICB.SelectedItem,
-                             (Plateforme)GamePlateformCB.SelectedItem,
-                             (VersionPays)GameVersionCB.SelectedItem
-                          );
-            ResetFieldValue();
+            try
+            {
+                IModelJeux.Add(
+                                GameNameTB.Text,
+                                GameDescTB.Text,
+                                new[] { "", "" },
+                                ReleaseDateDP.SelectedDate.Value,
+                                (Genre)GameGenderCB.SelectedItem,
+                                (PEGI)GamePEGICB.SelectedItem,
+                                (Plateforme)GamePlateformCB.SelectedItem,
+                                (VersionPays)GameVersionCB.SelectedItem
+                               );
+                ResetFieldValue();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Veuillez remplir les champs\n{ex.Message}", "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
 
         private void RemoveGameBtn_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void EditGameBtn_Click(object sender, RoutedEventArgs e)
         {
-
         }
+
         private void ResetFieldBtn_Click(object sender, RoutedEventArgs e)
         {
             ResetFieldValue();
+        }
+
+        private void listView_Click(object sender, RoutedEventArgs e)
+        {
+            var item = GameLibraryLV.SelectedItem;
+            if (item != null)
+            {
+                GameNameTB.Text = "";
+                GameDescTB.Text = "";
+                ReleaseDateDP.SelectedDate = null;
+                GameGenderCB.SelectedItem = null;
+                GamePEGICB.SelectedItem = null;
+                GamePlateformCB.SelectedItem = null;
+                GameVersionCB.SelectedItem = null;
+            }
         }
 
         private void ResetFieldValue()

@@ -38,8 +38,8 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Label Content="Jeux" HorizontalAlignment="Left" Margin="19,62,0,0" VerticalAlignment="Top" />
-        <ListView Margin="0,104,0,0" ItemsSource="{Binding IModelHistorique.Display}">
+        <Label Content="Jeux" HorizontalAlignment="Left" Margin="19,58,0,0" VerticalAlignment="Top" />
+        <ListView Margin="0,104,0,0" ItemsSource="{Binding IModelHistorique.Display}" Name="ListViewHistorique">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Jeu" DisplayMemberBinding="{Binding Games.Item1.Nom}"/>
@@ -52,11 +52,11 @@
             </ListView.View>
         </ListView>
         <Button x:Name="FinishBtn" Content="Finis" HorizontalAlignment="Left" Margin="507,42,0,0" VerticalAlignment="Top"
-                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="53" />
+                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="53" Click="SetFinished"/>
         <Button x:Name="AddGameBtn" Content="Ajouter jeux" HorizontalAlignment="Left" Margin="370,42,0,0" VerticalAlignment="Top"
                 Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="76" Click="AddGameToHistorique"/>
         <Button x:Name="InProgressBtn" Content="En cours" HorizontalAlignment="Left" Margin="451,42,0,0" VerticalAlignment="Top"
-                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="54" />
+                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="54" Click="SetInProgress"/>
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0"
                 Click="btn_Home_Click" />

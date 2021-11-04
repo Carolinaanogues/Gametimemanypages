@@ -33,7 +33,7 @@ namespace manypages.Models
         /// <param name="id">the guid to search</param>
         /// <returns>user found</returns>
         public Profil GetByGuid(Guid id) => Profiles.First(u => u.Id == id);
-        
+
         /// <summary>
         /// Get a user by its username
         /// </summary>
@@ -97,7 +97,7 @@ namespace manypages.Models
             Profiles[index].Email = "";
             Profiles[index].MotDePasse = "";
         }
-        
+
         public bool UserLogin(string username, string password)
         {
             try

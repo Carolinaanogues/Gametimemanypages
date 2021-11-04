@@ -25,9 +25,9 @@ namespace manypages
         public ModelProfiles Profiles { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
         public ModelJeux IModelJeux { get; set; }
-        
-        public Profile(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh) 
-        {         
+
+        public Profile(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
+        {
             DataContext = this;
             Profiles = mp;
             IProfile = pf;
@@ -61,7 +61,7 @@ namespace manypages
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() != true) return;
             openFileDialog.Filter = "Image files (*.png)|(*.jpg)";
-           
+
 
             BitmapImage bitmapImage = new BitmapImage();
             bitmapImage.BeginInit();

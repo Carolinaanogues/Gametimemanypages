@@ -55,10 +55,30 @@ namespace manypages
         private void AddGameToHistorique(object sender, RoutedEventArgs e)
         {
             Jeuxvideo vg = (Jeuxvideo)ComboBoxGame.SelectedItem;
+            if (vg == null)
+                return;
             ObjectStructure.Objects.Historique hist =
                 new ObjectStructure.Objects.Historique(Profile, new Tuple<Jeuxvideo, Status>(vg, Status.Started));
             IModelHistorique.AddGame(hist);
             btn_Historique_Click(sender, e);
+        }
+
+        private void SetFinished(object sender, RoutedEventArgs e)
+        {
+            UpdateStatus((ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem, Status.Finished);
+            btn_Historique_Click(sender, e);
+        }
+
+        private void SetInProgress(object sender, RoutedEventArgs e)
+        {
+            UpdateStatus((ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem, Status.InProgress);
+            btn_Historique_Click(sender, e);
+        }
+
+        private void UpdateStatus(ObjectStructure.Objects.Historique hist, Status status)
+        {
+            if (hist != null)
+                hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, status);
         }
     }
 }

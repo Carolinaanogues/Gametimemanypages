@@ -11,6 +11,7 @@ namespace manypages
         public ModelProfiles Profiles { get; set; } = new ModelProfiles();
         public ModelJeux Jeux { get; set; } = new ModelJeux();
         public ModelHistorique Historique { get; set; } = new ModelHistorique();
+
         public MainWindow()
         {
             InitializeComponent();
