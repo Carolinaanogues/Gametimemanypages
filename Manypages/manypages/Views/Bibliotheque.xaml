@@ -19,7 +19,6 @@
                 <GridView>
                     <GridViewColumn Header="Nom du jeu" DisplayMemberBinding="{Binding Nom}"/>
                     <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}"/>
-                    <GridViewColumn Header="Images" DisplayMemberBinding="{Binding Images}"/>
                     <GridViewColumn Header="Date de sortie" DisplayMemberBinding="{Binding Date}"/>
                     <GridViewColumn Header="Genre" DisplayMemberBinding="{Binding Genre}"/>
                     <GridViewColumn Header="PEGI" DisplayMemberBinding="{Binding Pegi}"/>
