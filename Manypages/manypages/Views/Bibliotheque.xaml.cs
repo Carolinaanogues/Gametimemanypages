@@ -61,7 +61,7 @@ namespace manypages
                 IModelJeux.Add(
                                 GameNameTB.Text,
                                 GameDescTB.Text,
-                                new[] { "", "" },
+                                "",
                                 ReleaseDateDP.SelectedDate.Value,
                                 (Genre)GameGenderCB.SelectedItem,
                                 (PEGI)GamePEGICB.SelectedItem,
@@ -93,16 +93,17 @@ namespace manypages
         private void listView_Click(object sender, RoutedEventArgs e)
         {
             var item = GameLibraryLV.SelectedItem;
-            if (item != null)
-            {
-                GameNameTB.Text = "";
-                GameDescTB.Text = "";
-                ReleaseDateDP.SelectedDate = null;
-                GameGenderCB.SelectedItem = null;
-                GamePEGICB.SelectedItem = null;
-                GamePlateformCB.SelectedItem = null;
-                GameVersionCB.SelectedItem = null;
-            }
+
+            if (item == null)
+                return;
+
+            GameNameTB.Text = "";
+            GameDescTB.Text = "";
+            ReleaseDateDP.SelectedDate = null;
+            GameGenderCB.SelectedItem = null;
+            GamePEGICB.SelectedItem = null;
+            GamePlateformCB.SelectedItem = null;
+            GameVersionCB.SelectedItem = null;
         }
 
         private void ResetFieldValue()
