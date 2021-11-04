@@ -22,10 +22,5 @@ namespace manypages
         {
             frame.NavigationService.Navigate(new Login(Profiles, Jeux, Historique));
         }
-
-        private void frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
-
-        }
     }
 }

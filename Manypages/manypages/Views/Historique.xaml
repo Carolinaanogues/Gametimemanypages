@@ -18,7 +18,8 @@
             </GridSplitter.RenderTransform>
         </GridSplitter>
 
-        <Label Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="0,12,0,0" FontWeight="Bold" />
+        <Label Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="0,12,0,0"
+               FontWeight="Bold" />
 
         <GridSplitter HorizontalAlignment="Left" Height="555" Margin="280,-216,0,0" VerticalAlignment="Top" Width="5"
                       RenderTransformOrigin="0.5,0.5" Background="#FF1F58F6">
@@ -31,39 +32,47 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <ComboBox Name="ComboBoxGame" HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="120" Height="19" ItemsSource="{Binding IModelJeux.Vgs}">
+        <ComboBox Name="ComboBoxGame" HorizontalAlignment="Left" Margin="19,80,0,0" VerticalAlignment="Top" Width="120"
+                  Height="19" ItemsSource="{Binding IModelJeux.Vgs}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Nom}"/>
+                    <TextBlock Text="{Binding Nom}" />
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
         <Label Content="Jeux" HorizontalAlignment="Left" Margin="19,58,0,0" VerticalAlignment="Top" />
-        <ListView Margin="0,104,0,0" ItemsSource="{Binding IModelHistorique.Display}" Name="ListViewHistorique" MouseDoubleClick="LoadGameFromHist">
+        <ListView Margin="0,104,0,0" ItemsSource="{Binding IModelHistorique.Display}" Name="ListViewHistorique"
+                  MouseDoubleClick="LoadGameFromHist">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Jeu" DisplayMemberBinding="{Binding Games.Item1.Nom}"/>
-                    <GridViewColumn Header="Genre" DisplayMemberBinding="{Binding Games.Item1.Genre}"/>
-                    <GridViewColumn Header="PEGI" DisplayMemberBinding="{Binding Games.Item1.Pegi}"/>
-                    <GridViewColumn Header="Plateforme" DisplayMemberBinding="{Binding Games.Item1.Plateforme}"/>
-                    <GridViewColumn Header="Version" DisplayMemberBinding="{Binding Games.Item1.Version}"/>
-                    <GridViewColumn Header="Statut" DisplayMemberBinding="{Binding Games.Item2}"/>
+                    <GridViewColumn Header="Jeu" DisplayMemberBinding="{Binding Games.Item1.Nom}" />
+                    <GridViewColumn Header="Genre" DisplayMemberBinding="{Binding Games.Item1.Genre}" />
+                    <GridViewColumn Header="PEGI" DisplayMemberBinding="{Binding Games.Item1.Pegi}" />
+                    <GridViewColumn Header="Plateforme" DisplayMemberBinding="{Binding Games.Item1.Plateforme}" />
+                    <GridViewColumn Header="Version" DisplayMemberBinding="{Binding Games.Item1.Version}" />
+                    <GridViewColumn Header="Statut" DisplayMemberBinding="{Binding Games.Item2}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="FinishBtn" Content="Finis" HorizontalAlignment="Left" Margin="507,42,0,0" VerticalAlignment="Top"
-                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="53" Click="SetFinished"/>
-        <Button x:Name="AddGameBtn" Content="Ajouter jeux" HorizontalAlignment="Left" Margin="370,42,0,0" VerticalAlignment="Top"
-                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="76" Click="AddGameToHistorique"/>
-        <Button x:Name="InProgressBtn" Content="En cours" HorizontalAlignment="Left" Margin="451,42,0,0" VerticalAlignment="Top"
-                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="54" Click="SetInProgress"/>
+        <Button x:Name="FinishBtn" Content="Finis" HorizontalAlignment="Left" Margin="507,42,0,0"
+                VerticalAlignment="Top"
+                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="53" Click="SetFinished" />
+        <Button x:Name="AddGameBtn" Content="Ajouter jeux" HorizontalAlignment="Left" Margin="370,42,0,0"
+                VerticalAlignment="Top"
+                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="76"
+                Click="AddGameToHistorique" />
+        <Button x:Name="InProgressBtn" Content="En cours" HorizontalAlignment="Left" Margin="451,42,0,0"
+                VerticalAlignment="Top"
+                Background="#FF1F58F6" Foreground="White" BorderBrush="#FF1F58F6" Width="54" Click="SetInProgress" />
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0"
                 Click="btn_Home_Click" />
         <Button x:Name="btn_Biblio" Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="81" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Biblio_Click" />
+                Width="81" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0"
+                Click="btn_Biblio_Click" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="78" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="136,5,0,0" Click="btn_Historique_Click" />
+                Width="78" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="136,5,0,0"
+                Click="btn_Historique_Click" />
         <Button x:Name="btn_Profile" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="205,5,0,0"
                 Click="btn_Home_Copy2_Click" />

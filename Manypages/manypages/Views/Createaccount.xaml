@@ -5,12 +5,14 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d"
       Title="Createaccount" Height="450" Width="800">
-    <Grid >
+    <Grid>
         <Button x:Name="btn_Home" Content="Se connecter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" />
-        <Label Content="Créer un compte" HorizontalAlignment="Left" Margin="14,39,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30"/>
+                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0"
+                Click="btn_Home_Click" />
+        <Label Content="Créer un compte" HorizontalAlignment="Left" Margin="14,39,0,0" VerticalAlignment="Top"
+               FontWeight="Bold" FontSize="30" />
         <GridSplitter HorizontalAlignment="Left" Height="461" Margin="253,-134,0,0" VerticalAlignment="Top" Width="5"
-            RenderTransformOrigin="0.5,0.5" Background="#FF46ACE0">
+                      RenderTransformOrigin="0.5,0.5" Background="#FF46ACE0">
             <GridSplitter.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform />
@@ -20,19 +22,32 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <Button Content="Créer " HorizontalAlignment="Left" Margin="378,394,0,0" VerticalAlignment="Top" Background="#FF46ACE0" Foreground="White" Width="72" FontSize="16" Click="CreateAccount"/>
-        <Label Content="Pseudo :" HorizontalAlignment="Left" Margin="30,136,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="372,136,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
-        <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Margin="160,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <PasswordBox x:Name="pwdPassword" HorizontalAlignment="Left" Margin="554,143,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Nom :" HorizontalAlignment="Left" Margin="30,194,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Prénom :" HorizontalAlignment="Left" Margin="372,194,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Date de naissance :" HorizontalAlignment="Left" Margin="30,256,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Email :" HorizontalAlignment="Left" Margin="30,322,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="160,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="554,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="252,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187"/>
-        <DatePicker x:Name="dpBirthDate" HorizontalAlignment="Left" Margin="252,260,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblErr1" Content="" HorizontalAlignment="Left" Margin="304,363,0,0" VerticalAlignment="Top" Width="220" Foreground="Red"/>
+        <Button Content="Créer " HorizontalAlignment="Left" Margin="378,394,0,0" VerticalAlignment="Top"
+                Background="#FF46ACE0" Foreground="White" Width="72" FontSize="16" Click="CreateAccount" />
+        <Label Content="Pseudo :" HorizontalAlignment="Left" Margin="30,136,0,0" VerticalAlignment="Top"
+               FontWeight="Bold" FontSize="16" />
+        <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="372,136,0,0" VerticalAlignment="Top"
+               FontWeight="Bold" FontSize="16" />
+        <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Margin="160,143,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="120" />
+        <PasswordBox x:Name="pwdPassword" HorizontalAlignment="Left" Margin="554,143,0,0" VerticalAlignment="Top"
+                     Width="120" />
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="30,194,0,0" VerticalAlignment="Top" FontWeight="Bold"
+               FontSize="16" />
+        <Label Content="Prénom :" HorizontalAlignment="Left" Margin="372,194,0,0" VerticalAlignment="Top"
+               FontWeight="Bold" FontSize="16" />
+        <Label Content="Date de naissance :" HorizontalAlignment="Left" Margin="30,256,0,0" VerticalAlignment="Top"
+               FontWeight="Bold" FontSize="16" />
+        <Label Content="Email :" HorizontalAlignment="Left" Margin="30,322,0,0" VerticalAlignment="Top"
+               FontWeight="Bold" FontSize="16" />
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="160,201,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="554,201,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="252,329,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="187" />
+        <DatePicker x:Name="dpBirthDate" HorizontalAlignment="Left" Margin="252,260,0,0" VerticalAlignment="Top" />
+        <Label x:Name="lblErr1" Content="" HorizontalAlignment="Left" Margin="304,363,0,0" VerticalAlignment="Top"
+               Width="220" Foreground="Red" />
     </Grid>
 </Page>

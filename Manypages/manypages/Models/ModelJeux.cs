@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
 using manypages.ObjectStructure.Enums;
 using manypages.ObjectStructure.Objects;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Processing;
 
 namespace manypages.Models
 {
@@ -34,13 +31,6 @@ namespace manypages.Models
         /// <param name="index">index where the object is in the list</param>
         /// <returns>Video game found</returns>
         public Jeuxvideo GetByIndex(int index) => Vgs[index];
-
-        /// <summary>
-        /// Get a video game by its Guid
-        /// </summary>
-        /// <param name="id">the guid to search</param>
-        /// <returns>video game found</returns>
-        public Jeuxvideo GetByGuid(Guid id) => Vgs.First(vg => vg.Id == id);
 
         /// <summary>
         /// Get a video game by its index
@@ -97,55 +87,6 @@ namespace manypages.Models
         /// </summary>
         /// <param name="index">where the video game at</param>
         public void Delete(int index) => Vgs.RemoveAt(index);
-
-        /// <summary>
-        /// Set a video game to its default value based on its index
-        /// </summary>
-        /// <param name="index">where the video game at</param>
-        public void Reset(int index)
-        {
-            Vgs[index].Nom = "";
-            Vgs[index].Description = "";
-            Vgs[index].Image = "";
-            Vgs[index].Date = DateTime.Now;
-            Vgs[index].Genre = Genre.RPG;
-            Vgs[index].Pegi = PEGI.PEGI18;
-            Vgs[index].Plateforme = Plateforme.PC;
-            Vgs[index].Version = VersionPays.NTSC;
-        }
-
-        #endregion
-
-        #region ImageManipulation
-
-        /// <summary>
-        /// Resize an image
-        /// </summary>
-        /// <param name="imgUri">the uri's image</param>
-        /// <returns>The new path where the image is saved</returns>
-        public string ResizeImage(Uri imgUri)
-        {
-            using Image image = Image.Load(imgUri.AbsolutePath);
-            int width = image.Width / 2;
-            int height = image.Height / 2;
-            image.Mutate(x => x.Resize(width, height));
-            string newPath = NewPath(imgUri);
-            image.Save(newPath);
-            return newPath;
-        }
-
-        #endregion
-
-        #region Utils
-
-        private string NewPath(Uri imgUri)
-        {
-            Random random = new Random();
-            byte[] buffer = new byte[16];
-            random.NextBytes(buffer);
-            string rdmStr = string.Concat(buffer.Select(x => x.ToString("X2")).ToArray()).ToLower();
-            return $"{Path.GetFullPath("./../../assets/GameImages")}\\{rdmStr}.{imgUri.ToString().Split('.').Last()}";
-        }
 
         #endregion
     }
