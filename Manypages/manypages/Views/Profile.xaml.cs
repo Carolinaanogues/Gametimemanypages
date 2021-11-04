@@ -31,27 +31,47 @@ namespace manypages
             IModelHistorique = mh;
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Redirectionne vers page Home
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Home(IProfile, Profiles, IModelJeux, IModelHistorique));
         }
-
+        /// <summary>
+        /// Redirectionne vers page Bibliotheque
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Biblio_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Bibliotheque(IProfile, Profiles, IModelJeux, IModelHistorique));
         }
-
+        /// <summary>
+        /// Redirectionne vers page Historique
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Historique_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Historique(IProfile, Profiles, IModelJeux, IModelHistorique));
         }
-
+        /// <summary>
+        /// Redirectionne vers page Profil
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Profile_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Profile(IProfile, Profiles, IModelJeux, IModelHistorique));
         }
-
+        /// <summary>
+        /// Bouton image permet d'ouvrir l'explorateur et choisir une image, aprés l'afficher
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
@@ -71,7 +91,11 @@ namespace manypages
             };
             imgdisplay.Source = img.Source;
         }
-
+        /// <summary>
+        /// Bouton Editer permet la modif du profil
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditDataBtn_Click(object sender, RoutedEventArgs e)
         {
             datepicker.IsEnabled = true;
@@ -83,7 +107,11 @@ namespace manypages
             update.IsEnabled = true;
             btn_putimg.IsEnabled = true;
         }
-
+        /// <summary>
+        /// Bouton update permet de sauvegarder les modifications
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void update_Click(object sender, RoutedEventArgs e)
         {
             Profiles.Update(
@@ -105,7 +133,11 @@ namespace manypages
             btn_putimg.IsEnabled = false;
             update.IsEnabled = false;
         }
-
+        /// <summary>
+        /// Bouton supprimer permet de supprimer le compte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SupDataBtn_Click(object sender, RoutedEventArgs e)
         {
             int index = Profiles.GetIndex(IProfile);
