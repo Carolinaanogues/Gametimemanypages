@@ -6,6 +6,7 @@ using manypages.ObjectStructure.Enums;
 using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Collections.Generic;
 
 namespace manypages
 {
@@ -21,6 +22,13 @@ namespace manypages
 
         private int _selectedItemIndex = 0;
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="pf">Instance du Profile</param>
+        /// <param name="mp"></param>
+        /// <param name="mj">Instance de modèle de jeu</param>
+        /// <param name="mh">Instance de modèle de l'historique</param>
         public Bibliotheque(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
             Profiles = mp;
@@ -37,6 +45,11 @@ namespace manypages
             GameVersionCB.ItemsSource = Enum.GetValues(typeof(VersionPays)).Cast<VersionPays>();
         }
 
+        /// <summary>
+        /// Action de 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Home_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Home(Profile, Profiles, IModelJeux, IModelHistorique));
@@ -87,7 +100,7 @@ namespace manypages
                                 _selectedItemIndex,
                                 GameNameTB.Text,
                                 GameDescTB.Text,
-                                new[] { "", "" },
+                                "",
                                 ReleaseDateDP.SelectedDate.Value,
                                 (Genre)GameGenderCB.SelectedItem,
                                 (PEGI)GamePEGICB.SelectedItem,
@@ -105,6 +118,15 @@ namespace manypages
 
         private void RemoveGameBtn_Click(object sender, RoutedEventArgs e)
         {
+            Jeuxvideo vg = IModelJeux.GetByIndex(_selectedItemIndex);
+            List<int> tmp = (from historique in IModelHistorique.Hist
+                             where vg.Id == historique.Games.Item1.Id
+                             select IModelHistorique.Hist.IndexOf(historique)).ToList();
+
+            foreach (int i in tmp)
+            {
+                IModelHistorique.Hist.RemoveAt(i);
+            }
             IModelJeux.Delete(_selectedItemIndex);
             ResetFieldValue();
         }
