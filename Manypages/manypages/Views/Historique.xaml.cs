@@ -14,10 +14,16 @@ namespace manypages
     /// </summary>
     public partial class Historique
     {
+        #region Properties
+
         public Profil Profile { get; set; }
         public ModelProfiles Profiles { get; set; }
         public ModelJeux IModelJeux { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
+
+        #endregion
+
+        #region Constructors
 
         public Historique(Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
@@ -32,6 +38,10 @@ namespace manypages
             IModelHistorique.ConnectedProfile = Profile;
             InitializeComponent();
         }
+
+        #endregion
+
+        #region NavigationService
 
         private void btn_Home_Copy2_Click(object sender, RoutedEventArgs e)
         {
@@ -53,6 +63,14 @@ namespace manypages
             NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
+        #endregion
+
+
+        #region Methods
+
+        /// <summary>
+        /// Add a game to history
+        /// </summary>
         private void AddGameToHistorique(object sender, RoutedEventArgs e)
         {
             Jeuxvideo vg = (Jeuxvideo)ComboBoxGame.SelectedItem;
@@ -82,12 +100,20 @@ namespace manypages
                 hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, status);
         }
 
+        /// <summary>
+        /// Load a game view by double clicking on a record
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadGameFromHist(object sender, RoutedEventArgs e)
         {
-            ObjectStructure.Objects.Historique hist = (ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem;
+            ObjectStructure.Objects.Historique hist =
+                (ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem;
             Jeuxvideo vg = hist.Games.Item1;
             int index = IModelJeux.GetIndex(vg);
             NavigationService?.Navigate(new Bibliotheque(index, Profile, Profiles, IModelJeux, IModelHistorique));
         }
+
+        #endregion
     }
 }
