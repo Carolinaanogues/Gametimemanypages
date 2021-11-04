@@ -72,7 +72,7 @@ namespace manypages
         }
 
         /// <summary>
-        /// Action de 
+        /// Retour au menu
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -81,16 +81,31 @@ namespace manypages
             NavigationService?.Navigate(new Home(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
+        /// <summary>
+        /// Page Bibliothèque de jeu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Biblio_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Bibliotheque(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
+        /// <summary>
+        /// Page Historique de jeu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Historique_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Historique(Profile, Profiles, IModelJeux, IModelHistorique));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Profile_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Profile(Profile, Profiles, IModelJeux, IModelHistorique));
