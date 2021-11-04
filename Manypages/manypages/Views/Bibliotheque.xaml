@@ -14,7 +14,7 @@
                 Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0" Click="btn_Historique_Click" />
         <Button x:Name="btn_Profile" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="191,5,0,0" Click="btn_Profile_Click" />
-        <ListView x:Name="GameLibraryLV" Margin="0,186,0,0" ItemsSource="{ Binding IModelJeux.Vgs }" PreviewMouseLeftButtonDown="GameLibraryLV_PreviewMouseLeftButtonDown">
+        <ListView x:Name="GameLibraryLV" Margin="0,184,0,2" ItemsSource="{ Binding IModelJeux.Vgs }" PreviewMouseLeftButtonUp="listView_Click">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Nom du jeu" DisplayMemberBinding="{Binding Nom}"/>
@@ -51,8 +51,8 @@
         <Button x:Name="RemoveGameBtn" Content="Retirer" HorizontalAlignment="Left" Margin="318,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="43" Click="RemoveGameBtn_Click"/>
         <Button x:Name="EditGameBtn" Content="Editer" HorizontalAlignment="Left" Margin="366,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="44" Click="EditGameBtn_Click"/>
         <Button x:Name="ResetFieldBtn" Content="Reset " HorizontalAlignment="Left" Margin="415,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="46" Click="ResetFieldBtn_Click"/>
-        <TextBox x:Name="GameNameTB" HorizontalAlignment="Left" Margin="59,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="GameDescTB" HorizontalAlignment="Left" Margin="92,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Height="28" UndoLimit="250" TextChanged="GameDescTB_TextChanged"/>
+        <TextBox x:Name="GameNameTB" HorizontalAlignment="Left" Margin="59,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="329"/>
+        <TextBox x:Name="GameDescTB" HorizontalAlignment="Left" Margin="92,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Height="28" UndoLimit="250"/>
         <ComboBox x:Name="GamePlateformCB" HorizontalAlignment="Left" Margin="83,162,0,0" VerticalAlignment="Top" Width="96" Height="19" RenderTransformOrigin="0.481,1.138"/>
         <ComboBox x:Name="GameGenderCB" HorizontalAlignment="Left" Margin="586,97,0,0" VerticalAlignment="Top" Width="96" Height="19"/>
         <ComboBox x:Name="GamePEGICB" HorizontalAlignment="Left" Margin="586,120,0,0" VerticalAlignment="Top" Width="96" Height="19"/>

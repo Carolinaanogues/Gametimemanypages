@@ -13,7 +13,7 @@ namespace manypages.ObjectStructure.Objects
         public Guid Id { get; set; }
         public string Nom { get; set; }
         public string Description { get; set; }
-        public string[] Images { get; set; }
+        public string Image { get; set; }
         public DateTime Date { get; set; }
         public Genre Genre { get; set; }
         public PEGI Pegi { get; set; }
@@ -24,13 +24,13 @@ namespace manypages.ObjectStructure.Objects
 
         #region Constructors
 
-        public Jeuxvideo(string nom, string description, string[] images, DateTime date, Genre genre, PEGI pegi,
+        public Jeuxvideo(string nom, string description, string image, DateTime date, Genre genre, PEGI pegi,
             Plateforme plateforme, VersionPays version)
         {
             Id = Guid.NewGuid();
             Nom = nom;
             Description = description;
-            Images = images;
+            Image = image;
             Date = date;
             Genre = genre;
             Pegi = pegi;

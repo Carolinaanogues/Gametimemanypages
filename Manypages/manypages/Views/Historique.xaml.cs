@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Data;
 using manypages.Models;
 using manypages.ObjectStructure.Enums;
 using manypages.ObjectStructure.Objects;
@@ -66,19 +67,27 @@ namespace manypages
         private void SetFinished(object sender, RoutedEventArgs e)
         {
             UpdateStatus((ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem, Status.Finished);
-            btn_Historique_Click(sender, e);
+            CollectionViewSource.GetDefaultView(IModelHistorique.Display).Refresh();
         }
 
         private void SetInProgress(object sender, RoutedEventArgs e)
         {
             UpdateStatus((ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem, Status.InProgress);
-            btn_Historique_Click(sender, e);
+            CollectionViewSource.GetDefaultView(IModelHistorique.Display).Refresh();
         }
 
         private void UpdateStatus(ObjectStructure.Objects.Historique hist, Status status)
         {
             if (hist != null)
                 hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, status);
+        }
+
+        private void LoadGameFromHist(object sender, RoutedEventArgs e)
+        {
+            ObjectStructure.Objects.Historique hist = (ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem;
+            Jeuxvideo vg = hist.Games.Item1;
+            int index = IModelJeux.GetIndex(vg);
+            NavigationService?.Navigate(new Bibliotheque(index, Profile, Profiles, IModelJeux, IModelHistorique));
         }
     }
 }
