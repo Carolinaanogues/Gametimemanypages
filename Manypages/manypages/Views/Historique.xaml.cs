@@ -81,5 +81,13 @@ namespace manypages
             if (hist != null)
                 hist.Games = new Tuple<Jeuxvideo, Status>(hist.Games.Item1, status);
         }
+
+        private void LoadGameFromHist(object sender, RoutedEventArgs e)
+        {
+            ObjectStructure.Objects.Historique hist = (ObjectStructure.Objects.Historique)ListViewHistorique.SelectedItem;
+            Jeuxvideo vg = hist.Games.Item1;
+            int index = IModelJeux.GetIndex(vg);
+            NavigationService?.Navigate(new Bibliotheque(index, Profile, Profiles, IModelJeux, IModelHistorique));
+        }
     }
 }
