@@ -19,7 +19,6 @@
                 <GridView>
                     <GridViewColumn Header="Nom du jeu" DisplayMemberBinding="{Binding Nom}"/>
                     <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}"/>
-                    <GridViewColumn Header="Images" DisplayMemberBinding="{Binding Images}"/>
                     <GridViewColumn Header="Date de sortie" DisplayMemberBinding="{Binding Date}"/>
                     <GridViewColumn Header="Genre" DisplayMemberBinding="{Binding Genre}"/>
                     <GridViewColumn Header="PEGI" DisplayMemberBinding="{Binding Pegi}"/>
@@ -59,7 +58,7 @@
         <ComboBox x:Name="GameVersionCB" HorizontalAlignment="Left" Margin="592,195,0,0" VerticalAlignment="Top" Width="96" Height="19"/>
         <DatePicker x:Name="ReleaseDateDP" HorizontalAlignment="Left" Margin="58,166,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_putimg" Content="Chercher une image..." HorizontalAlignment="Left" Margin="592,120,0,0" VerticalAlignment="Top"
-            BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="112" Height="18" />
+            BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="112" Height="18" Click="Button_Click"/>
         <Image HorizontalAlignment="Left" Height="105" Margin="592,10,0,0" VerticalAlignment="Top" Width="111" Name="imageJeux"/>
     </Grid>
 </Page>

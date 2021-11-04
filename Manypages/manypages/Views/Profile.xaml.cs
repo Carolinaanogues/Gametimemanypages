@@ -15,15 +15,9 @@ namespace manypages
     /// <summary>
     /// Logique d'interaction pour Profile.xaml
     /// </summary>
-    public partial class Profile: INotifyPropertyChanged
+    public partial class Profile
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private ObjectStructure.Objects.Profil profile;
+        private Profil profile;
         private ModelProfiles profiles;
         private ModelJeux modelJeux;
         private ModelHistorique modelHistorique;
@@ -93,9 +87,6 @@ namespace manypages
             txtpasswd.IsReadOnly = false;
             update.IsEnabled = true;
             btn_putimg.IsEnabled = true;
-
-
-
         }
 
         private void update_Click(object sender, RoutedEventArgs e)

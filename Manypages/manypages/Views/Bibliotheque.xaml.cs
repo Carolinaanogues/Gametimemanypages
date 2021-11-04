@@ -75,6 +75,15 @@ namespace manypages
             GamePEGICB.SelectedItem = selectedItem.Pegi;
             GamePlateformCB.SelectedItem = selectedItem.Plateforme;
             GameVersionCB.SelectedItem = selectedItem.Version;
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri(selectedItem.Image);
+            bitmapImage.EndInit();
+            Image img = new Image
+            {
+                Source = bitmapImage
+            };
+            imageJeux.Source = img.Source;
         }
 
         /// <summary>
@@ -129,7 +138,7 @@ namespace manypages
                 IModelJeux.Add(
                     GameNameTB.Text,
                     GameDescTB.Text,
-                    "",
+                    imageJeux.Source.ToString(),
                     ReleaseDateDP.SelectedDate.Value,
                     (Genre)GameGenderCB.SelectedItem,
                     (PEGI)GamePEGICB.SelectedItem,
@@ -158,7 +167,7 @@ namespace manypages
                     _selectedItemIndex,
                     GameNameTB.Text,
                     GameDescTB.Text,
-                    "",
+                    imageJeux.Source.ToString(),
                     ReleaseDateDP.SelectedDate.Value,
                     (Genre)GameGenderCB.SelectedItem,
                     (PEGI)GamePEGICB.SelectedItem,
@@ -227,6 +236,15 @@ namespace manypages
             GamePEGICB.SelectedItem = selectedItem.Pegi;
             GamePlateformCB.SelectedItem = selectedItem.Plateforme;
             GameVersionCB.SelectedItem = selectedItem.Version;
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri(selectedItem.Image);
+            bitmapImage.EndInit();
+            Image img = new Image
+            {
+                Source = bitmapImage
+            };
+            imageJeux.Source = img.Source;
         }
 
         /// <summary>
