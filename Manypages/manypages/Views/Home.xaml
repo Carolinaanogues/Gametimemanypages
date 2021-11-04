@@ -35,8 +35,8 @@
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="112" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="514,220,0,0"
                 Click="btn_Home_Copy1_Click" Grid.Row="1" FontWeight="Bold" FontSize="18" />
-        <Button x:Name="btn_login" Content="" HorizontalAlignment="Left" Margin="707,33,0,0" VerticalAlignment="Top"
-                Width="36" Height="32" Grid.ColumnSpan="2" Click="btn_login_Click">
+        <Button x:Name="btn_login" Content="" HorizontalAlignment="Left" Margin="676,33,0,0" VerticalAlignment="Top"
+                Width="36" Height="32" Click="btn_login_Click">
             <Button.BorderBrush>
                 <ImageBrush />
             </Button.BorderBrush>
