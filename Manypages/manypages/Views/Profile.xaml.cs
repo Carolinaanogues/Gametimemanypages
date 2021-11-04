@@ -148,6 +148,8 @@ namespace manypages
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO implémenter la fonction reset qui reprend les valeurs de la personne connectée et écrase les textbox
+            // Monsieur vous êtes très sympathique ce fut un plaisir de participer à ce cours inter avec vous. signé William Pasquier.
+            // (On peut toujours négocier une bonne note en l'échange de mes quelques Bitcoin si jamais ^^)
         }
     }
 }
