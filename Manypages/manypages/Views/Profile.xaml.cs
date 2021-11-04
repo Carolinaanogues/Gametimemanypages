@@ -17,11 +17,6 @@ namespace manypages
     /// </summary>
     public partial class Profile
     {
-        private Profil profile;
-        private ModelProfiles profiles;
-        private ModelJeux modelJeux;
-        private ModelHistorique modelHistorique;
-
         public Profil IProfile { get; set; }
         public ModelProfiles Profiles { get; set; }
         public ModelHistorique IModelHistorique { get; set; }
@@ -109,7 +104,6 @@ namespace manypages
             update.IsEnabled = true;
             btn_putimg.IsEnabled = false;
             update.IsEnabled = false;
-
         }
     }
 }
