@@ -65,9 +65,11 @@ namespace manypages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png"
+            };
             if (openFileDialog.ShowDialog() != true) return;
-            openFileDialog.Filter = "Image files (*.png)|(*.jpg)";
 
 
             BitmapImage bitmapImage = new BitmapImage();
@@ -116,6 +118,15 @@ namespace manypages
             update.IsEnabled = true;
             btn_putimg.IsEnabled = false;
             update.IsEnabled = false;
+
+        }
+
+        private void SupDataBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int index = Profiles.GetIndex(IProfile);
+            Profiles.Delete(index);
+
+            NavigationService?.Navigate(new Login(Profiles, IModelJeux, IModelHistorique));
 
         }
     }
