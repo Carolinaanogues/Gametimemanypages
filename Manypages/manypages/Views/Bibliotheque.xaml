@@ -6,19 +6,15 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="381*"/>
-        </Grid.ColumnDefinitions>
         <Button x:Name="btn_Home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" Grid.ColumnSpan="2" />
+                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="0,5,0,0" Click="btn_Home_Click" />
         <Button x:Name="btn_Biblio" Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="20,5,0,0" Click="btn_Biblio_Click" Grid.Column="1" />
+                Width="73" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="58,5,0,0" Click="btn_Biblio_Click" />
         <Button x:Name="btn_Historique" Content="Historique" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="93,5,0,0" Click="btn_Historique_Click" Grid.Column="1" />
+                Width="60" BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="131,5,0,0" Click="btn_Historique_Click" />
         <Button x:Name="btn_Profile" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
-                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="153,5,0,0" Click="btn_Profile_Click" Grid.Column="1" />
-        <ListView x:Name="GameLibraryLV" Margin="0,186,0,0" ItemsSource="{ Binding IModelJeux.Vgs }" PreviewMouseLeftButtonUp="listView_Click">
+                BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="191,5,0,0" Click="btn_Profile_Click" />
+        <ListView x:Name="GameLibraryLV" Margin="0,184,0,2" ItemsSource="{ Binding IModelJeux.Vgs }" PreviewMouseLeftButtonUp="listView_Click">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Nom du jeu" DisplayMemberBinding="{Binding Nom}"/>
@@ -30,18 +26,18 @@
                     <GridViewColumn Header="Plateforme" DisplayMemberBinding="{Binding Plateforme}"/>
                     <GridViewColumn Header="Version" DisplayMemberBinding="{Binding Version}"/>
                 </GridView>
-                </ListView.View>
+            </ListView.View>
         </ListView>
-        <Label Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" FontWeight="Bold" FontSize="30" Margin="8,15,0,0" Grid.ColumnSpan="2"/>
-        <Label Content="Nom :" HorizontalAlignment="Left" Margin="11,66,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Label Content="Description :" HorizontalAlignment="Left" Margin="8,101,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Label Content="Date :" HorizontalAlignment="Left" Margin="11,131,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Label Content="Genre :" HorizontalAlignment="Left" Margin="486,92,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
-        <Label Content="PEGI :" HorizontalAlignment="Left" Margin="486,115,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
-        <Label Content="Platforme :" HorizontalAlignment="Left" Margin="11,158,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Label Content="Version :" HorizontalAlignment="Left" Margin="486,134,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
-        <Label Content="Image :" HorizontalAlignment="Left" Margin="486,66,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
-        <GridSplitter HorizontalAlignment="Left" Height="458" Margin="201,-165,0,0" VerticalAlignment="Top" Width="5" RenderTransformOrigin="0.5,0.5" Background="#FF1F58F6" Grid.Column="1">
+        <Label Content="Bibliothèque" HorizontalAlignment="Left" VerticalAlignment="Top" Width="208" FontWeight="Bold" FontSize="30" Margin="8,15,0,0"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="11,66,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Description :" HorizontalAlignment="Left" Margin="8,101,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Date :" HorizontalAlignment="Left" Margin="11,131,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Genre :" HorizontalAlignment="Left" Margin="524,92,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="PEGI :" HorizontalAlignment="Left" Margin="524,115,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Platforme :" HorizontalAlignment="Left" Margin="11,158,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Version :" HorizontalAlignment="Left" Margin="524,134,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Image :" HorizontalAlignment="Left" Margin="524,66,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <GridSplitter HorizontalAlignment="Left" Height="458" Margin="239,-165,0,0" VerticalAlignment="Top" Width="5" RenderTransformOrigin="0.5,0.5" Background="#FF1F58F6">
             <GridSplitter.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -51,18 +47,18 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
-        <Button x:Name="AddGameBtn" Content="Ajouter" HorizontalAlignment="Left" Margin="227,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="48" Click="AddGameBtn_Click" Grid.Column="1"/>
-        <Button x:Name="RemoveGameBtn" Content="Retirer" HorizontalAlignment="Left" Margin="280,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="43" Click="RemoveGameBtn_Click" Grid.Column="1"/>
-        <Button x:Name="EditGameBtn" Content="Editer" HorizontalAlignment="Left" Margin="328,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="44" Click="EditGameBtn_Click" Grid.Column="1"/>
-        <Button x:Name="ResetFieldBtn" Content="Reset " HorizontalAlignment="Left" Margin="377,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="46" Click="ResetFieldBtn_Click" Grid.Column="1"/>
-        <TextBox x:Name="GameNameTB" HorizontalAlignment="Left" Margin="21,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Grid.Column="1"/>
-        <TextBox x:Name="GameDescTB" HorizontalAlignment="Left" Margin="54,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Height="28" Grid.Column="1" UndoLimit="250"/>
-        <ComboBox x:Name="GamePlateformCB" HorizontalAlignment="Left" Margin="45,162,0,0" VerticalAlignment="Top" Width="96" Height="19" RenderTransformOrigin="0.481,1.138" Grid.Column="1"/>
-        <ComboBox x:Name="GameGenderCB" HorizontalAlignment="Left" Margin="548,97,0,0" VerticalAlignment="Top" Width="96" Height="19" Grid.Column="1"/>
-        <ComboBox x:Name="GamePEGICB" HorizontalAlignment="Left" Margin="548,120,0,0" VerticalAlignment="Top" Width="96" Height="19" Grid.Column="1"/>
-        <ComboBox x:Name="GameVersionCB" HorizontalAlignment="Left" Margin="548,144,0,0" VerticalAlignment="Top" Width="96" Height="19" Grid.Column="1"/>
-        <DatePicker x:Name="ReleaseDateDP" HorizontalAlignment="Left" Margin="21,133,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="btn_putimg" Content="Chercher une image..." HorizontalAlignment="Left" Margin="548,69,0,0" VerticalAlignment="Top"
-            BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="113" Height="18" Grid.Column="1" />
+        <Button x:Name="AddGameBtn" Content="Ajouter" HorizontalAlignment="Left" Margin="265,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="48" Click="AddGameBtn_Click"/>
+        <Button x:Name="RemoveGameBtn" Content="Retirer" HorizontalAlignment="Left" Margin="318,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="43" Click="RemoveGameBtn_Click"/>
+        <Button x:Name="EditGameBtn" Content="Editer" HorizontalAlignment="Left" Margin="366,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="44" Click="EditGameBtn_Click"/>
+        <Button x:Name="ResetFieldBtn" Content="Reset " HorizontalAlignment="Left" Margin="415,35,0,0" VerticalAlignment="Top" Background="#FF1F58F6" BorderBrush="#FF1F58F6" Foreground="White" Width="46" Click="ResetFieldBtn_Click"/>
+        <TextBox x:Name="GameNameTB" HorizontalAlignment="Left" Margin="59,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="329"/>
+        <TextBox x:Name="GameDescTB" HorizontalAlignment="Left" Margin="92,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Height="28" UndoLimit="250"/>
+        <ComboBox x:Name="GamePlateformCB" HorizontalAlignment="Left" Margin="83,162,0,0" VerticalAlignment="Top" Width="96" Height="19" RenderTransformOrigin="0.481,1.138"/>
+        <ComboBox x:Name="GameGenderCB" HorizontalAlignment="Left" Margin="586,97,0,0" VerticalAlignment="Top" Width="96" Height="19"/>
+        <ComboBox x:Name="GamePEGICB" HorizontalAlignment="Left" Margin="586,120,0,0" VerticalAlignment="Top" Width="96" Height="19"/>
+        <ComboBox x:Name="GameVersionCB" HorizontalAlignment="Left" Margin="586,144,0,0" VerticalAlignment="Top" Width="96" Height="19"/>
+        <DatePicker x:Name="ReleaseDateDP" HorizontalAlignment="Left" Margin="59,133,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_putimg" Content="Chercher une image..." HorizontalAlignment="Left" Margin="586,69,0,0" VerticalAlignment="Top"
+            BorderBrush="White" Background="#FF46ACE0" Foreground="White" Width="113" Height="18" />
     </Grid>
 </Page>
