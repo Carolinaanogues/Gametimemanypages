@@ -19,7 +19,7 @@
         <Button x:Name="btn_Profile" Content="Profil" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60"
                 BorderBrush="#FF050A31" Background="#FF0C0328" Foreground="White" Margin="153,5,0,0" Click="btn_Profile_Click" Grid.Column="1" />
         <ListView x:Name="GameLibraryLV" Margin="0,186,0,0" ItemsSource="{ Binding IModelJeux.Vgs }" PreviewMouseLeftButtonUp="listView_Click">
-            <ListView.V Grid.ColumnSpan="2"iew>
+            <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Nom du jeu" DisplayMemberBinding="{Binding Nom}"/>
                     <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}"/>
