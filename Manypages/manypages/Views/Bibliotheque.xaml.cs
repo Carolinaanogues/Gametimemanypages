@@ -52,6 +52,7 @@ namespace manypages
             IModelJeux = mj;
             IModelHistorique = mh;
             DataContext = this;
+            _selectedItemIndex = index;
 
             InitializeComponent();
 
