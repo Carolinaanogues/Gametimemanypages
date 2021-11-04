@@ -50,6 +50,14 @@ namespace manypages
             GameVersionCB.ItemsSource = Enum.GetValues(typeof(VersionPays)).Cast<VersionPays>();
         }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="pf"></param>
+        /// <param name="mp"></param>
+        /// <param name="mj"></param>
+        /// <param name="mh"></param>
         public Bibliotheque(int index, Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
         {
             Profiles = mp;

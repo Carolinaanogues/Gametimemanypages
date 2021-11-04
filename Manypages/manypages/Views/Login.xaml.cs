@@ -32,6 +32,11 @@ namespace manypages
 
         #region Login
 
+        /// <summary>
+        /// Méthode de login dans l'application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LogToApp(object sender, System.Windows.RoutedEventArgs e)
         {
             if (!Profiles.UserLogin(usrTxt.Text, psswrdTxt.Password))
@@ -45,6 +50,11 @@ namespace manypages
             NavigationService?.Navigate(new Home(Profiles.GetByUsername(usrTxt.Text), Profiles, Jeux, Historique));
         }
 
+        /// <summary>
+        /// Redirection vers la page de création de compte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoToCreateAccount(object sender, System.Windows.RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Createaccount(Profiles, Jeux, Historique));
