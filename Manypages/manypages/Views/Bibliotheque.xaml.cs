@@ -45,6 +45,32 @@ namespace manypages
             GameVersionCB.ItemsSource = Enum.GetValues(typeof(VersionPays)).Cast<VersionPays>();
         }
 
+        public Bibliotheque(int index, Profil pf, ModelProfiles mp, ModelJeux mj, ModelHistorique mh)
+        {
+            Profiles = mp;
+            Profile = pf;
+            IModelJeux = mj;
+            IModelHistorique = mh;
+            DataContext = this;
+
+            InitializeComponent();
+
+            GamePlateformCB.ItemsSource = Enum.GetValues(typeof(Plateforme)).Cast<Plateforme>();
+            GameGenderCB.ItemsSource = Enum.GetValues(typeof(Genre)).Cast<Genre>();
+            GamePEGICB.ItemsSource = Enum.GetValues(typeof(PEGI)).Cast<PEGI>();
+            GameVersionCB.ItemsSource = Enum.GetValues(typeof(VersionPays)).Cast<VersionPays>();
+
+            Jeuxvideo selectedItem = IModelJeux.GetByIndex(index);
+
+            GameNameTB.Text = selectedItem.Nom;
+            GameDescTB.Text = selectedItem.Description;
+            ReleaseDateDP.SelectedDate = selectedItem.Date;
+            GameGenderCB.SelectedItem = selectedItem.Genre;
+            GamePEGICB.SelectedItem = selectedItem.Pegi;
+            GamePlateformCB.SelectedItem = selectedItem.Plateforme;
+            GameVersionCB.SelectedItem = selectedItem.Version;
+        }
+
         /// <summary>
         /// Action de 
         /// </summary>
@@ -75,20 +101,21 @@ namespace manypages
             try
             {
                 IModelJeux.Add(
-                                GameNameTB.Text,
-                                GameDescTB.Text,
-                                "",
-                                ReleaseDateDP.SelectedDate.Value,
-                                (Genre)GameGenderCB.SelectedItem,
-                                (PEGI)GamePEGICB.SelectedItem,
-                                (Plateforme)GamePlateformCB.SelectedItem,
-                                (VersionPays)GameVersionCB.SelectedItem
-                               );
+                    GameNameTB.Text,
+                    GameDescTB.Text,
+                    "",
+                    ReleaseDateDP.SelectedDate.Value,
+                    (Genre)GameGenderCB.SelectedItem,
+                    (PEGI)GamePEGICB.SelectedItem,
+                    (Plateforme)GamePlateformCB.SelectedItem,
+                    (VersionPays)GameVersionCB.SelectedItem
+                );
                 ResetFieldValue();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Veuillez remplir tout les champs\n{ex.Message}", "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show($"Veuillez remplir tout les champs\n{ex.Message}", "Attention", MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
             }
         }
 
@@ -97,22 +124,23 @@ namespace manypages
             try
             {
                 IModelJeux.Update(
-                                _selectedItemIndex,
-                                GameNameTB.Text,
-                                GameDescTB.Text,
-                                "",
-                                ReleaseDateDP.SelectedDate.Value,
-                                (Genre)GameGenderCB.SelectedItem,
-                                (PEGI)GamePEGICB.SelectedItem,
-                                (Plateforme)GamePlateformCB.SelectedItem,
-                                (VersionPays)GameVersionCB.SelectedItem
-                               );
+                    _selectedItemIndex,
+                    GameNameTB.Text,
+                    GameDescTB.Text,
+                    "",
+                    ReleaseDateDP.SelectedDate.Value,
+                    (Genre)GameGenderCB.SelectedItem,
+                    (PEGI)GamePEGICB.SelectedItem,
+                    (Plateforme)GamePlateformCB.SelectedItem,
+                    (VersionPays)GameVersionCB.SelectedItem
+                );
                 CollectionViewSource.GetDefaultView(IModelJeux.Vgs).Refresh();
                 ResetFieldValue();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Veuillez remplir tout les champs\n{ex.Message}", "Attention", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show($"Veuillez remplir tout les champs\n{ex.Message}", "Attention", MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
             }
         }
 
@@ -120,13 +148,14 @@ namespace manypages
         {
             Jeuxvideo vg = IModelJeux.GetByIndex(_selectedItemIndex);
             List<int> tmp = (from historique in IModelHistorique.Hist
-                             where vg.Id == historique.Games.Item1.Id
-                             select IModelHistorique.Hist.IndexOf(historique)).ToList();
+                where vg.Id == historique.Games.Item1.Id
+                select IModelHistorique.Hist.IndexOf(historique)).ToList();
 
             foreach (int i in tmp)
             {
                 IModelHistorique.Hist.RemoveAt(i);
             }
+
             IModelJeux.Delete(_selectedItemIndex);
             ResetFieldValue();
         }
@@ -143,7 +172,7 @@ namespace manypages
 
             if (selectedItem == null)
                 return;
-            
+
             GameNameTB.Text = selectedItem.Nom;
             GameDescTB.Text = selectedItem.Description;
             ReleaseDateDP.SelectedDate = selectedItem.Date;
@@ -151,7 +180,6 @@ namespace manypages
             GamePEGICB.SelectedItem = selectedItem.Pegi;
             GamePlateformCB.SelectedItem = selectedItem.Plateforme;
             GameVersionCB.SelectedItem = selectedItem.Version;
-            
         }
 
         private void ResetFieldValue()

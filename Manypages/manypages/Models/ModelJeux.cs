@@ -43,6 +43,13 @@ namespace manypages.Models
         public Jeuxvideo GetByGuid(Guid id) => Vgs.First(vg => vg.Id == id);
 
         /// <summary>
+        /// Get a video game by its index
+        /// </summary>
+        /// <param name="vg">the video game to search</param>
+        /// <returns>the index of this video game</returns>
+        public int GetIndex(Jeuxvideo vg) => Vgs.IndexOf(Vgs.First(j => j.Id == vg.Id));
+
+        /// <summary>
         /// Add a new video game in the ObservableCollection
         /// </summary>
         /// <param name="nom">video game's name</param>
